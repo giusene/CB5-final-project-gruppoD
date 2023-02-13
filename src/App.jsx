@@ -1,9 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+
+import { database } from "./utils/firebase";
+import { onValue, ref } from "firebase/database";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const starCountRef = ref(database);
+
+    onValue(starCountRef, snapshot => {
+      const data = snapshot.val();
+      const { scoreboard } = data;
+
+      console.log("SCOREBOARD: ", scoreboard);
+    });
+  }, []);
 
   return (
     <div className="App">
@@ -17,7 +31,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -28,7 +42,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
