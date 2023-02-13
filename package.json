@@ -11,7 +11,9 @@
   "dependencies": {
     "firebase": "^9.17.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-css-modules": "^4.7.11",
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
