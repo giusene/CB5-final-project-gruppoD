@@ -1,4 +1,5 @@
 .Layout {
+  height: 100vh;
   .background {
     min-width: 100%;
     min-height: 400px;
@@ -9,12 +10,15 @@
   }
 
   .images {
-    position: absolute;
-    border: 1px solid red;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+
+    height: 300px;
     width: 100%;
     .avatar1 {
-      width: 140px;
+      width: 160px;
 
       position: absolute;
       top: 60%;
@@ -22,14 +26,23 @@
       z-index: -1;
       transform: rotate(30deg);
     }
+    .avatar2 {
+      width: 160px;
+
+      position: absolute;
+      top: 10%;
+      right: -30px;
+      z-index: -1;
+      transform: rotate(-20deg);
+    }
 
     .eyes {
       position: absolute;
-      top: 500px;
-      left: 50px;
+
       .eye {
         position: absolute;
 
+        border-radius: 20px;
         width: 10px;
       }
     }
