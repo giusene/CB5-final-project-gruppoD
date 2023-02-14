@@ -4,6 +4,8 @@ import styles from "./App.module.scss";
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 
+import Hero from './components/hero/Hero';
+
 function App() {
   useEffect(() => {
     const starCountRef = ref(database);
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1>CIAO A TUTTI</h1>
+      <Hero />
     </div>
   );
 }
