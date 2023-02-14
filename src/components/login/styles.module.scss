@@ -1,0 +1,41 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    height: 400px;
+    width: 600px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  }
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+  input {
+    padding: 6px, 12px;
+    width: 250px;
+    height: 30px;
+  }
+  .BtnLogin {
+    width: 150px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
