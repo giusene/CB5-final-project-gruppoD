@@ -15,7 +15,7 @@ const Login = (options) => {
       <form onSubmit={onHandleSubmit}>
         <h2> Choose your Avatar</h2>
         <SelectOptions />
-        <img src={options.image} alt="immagineAvatar" />
+
         <h2>Choose your NickName</h2>
         <input
           value={username}
@@ -23,7 +23,7 @@ const Login = (options) => {
           type="text"
           id="username"
           name="username"
-          placeholder="Enter your username..."
+          placeholder="Enter your NickName..."
         />
         <input className={styles.BtnLogin} type="submit" value="Login" />
       </form>
