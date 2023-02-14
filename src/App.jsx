@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.scss";
+import Footer from "./components/footer/Footer";
 
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className={styles.App}>
       <h1>CIAO A TUTTI</h1>
+      <Footer />
     </div>
   );
 }
