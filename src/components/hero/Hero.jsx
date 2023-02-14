@@ -26,7 +26,7 @@ const Hero = () => {
       rispondendo alle domande fino allo scadere del tempo. 
       Ogni domanda corretta ti farà guadagnare <b>10 punti</b>. 
       Non perdere tempo, metti alla prova le tue conoscenze e 
-      raggiungi la cima della classifica!</p>
+      raggiungi la cima della classifica!</p> 
       <button className={styles.btnScore} onClick={openModal}>
         <MdSportsScore />
       </button>
