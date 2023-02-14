@@ -1,0 +1,37 @@
+.Layout {
+  .background {
+    min-width: 100%;
+    min-height: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+
+  .images {
+    position: absolute;
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    .avatar1 {
+      width: 140px;
+
+      position: absolute;
+      top: 60%;
+      left: 0;
+      z-index: -1;
+      transform: rotate(30deg);
+    }
+
+    .eyes {
+      position: absolute;
+      top: 500px;
+      left: 50px;
+      .eye {
+        position: absolute;
+
+        width: 10px;
+      }
+    }
+  }
+}

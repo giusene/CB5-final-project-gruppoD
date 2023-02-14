@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./App.module.scss";
 
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
+import HomeLayout from "./components/homeLayout/HomeLayout";
 
 function App() {
   useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1>CIAO A TUTTI</h1>
+      <HomeLayout></HomeLayout>
     </div>
   );
 }
