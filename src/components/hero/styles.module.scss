@@ -1,10 +1,26 @@
 .Hero {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
   position: relative;
+
+    $breakpoint-tablet: 768px;
+    @media (min-width: $breakpoint-tablet) {
+        & {
+            margin: 0 100px;
+           
+          }
+    }
+
+    $breakpoint-desktop: 1024px;
+    @media (min-width: $breakpoint-desktop) {
+        & {
+            margin: 0 150px;
+          }
+    }
 
   .containerTitle {
     display: flex;
@@ -37,13 +53,13 @@
   .btnScore {
     border: none;
     border-radius: 20px;
-    background-color: rgba(0, 59, 107, 0.466);
+    background-color:rgb(134, 158, 228);
     color: #eeeeee;
     padding-left: 10px;
     cursor: pointer;
     font-size: 20px;
     height: 50px;
-    width: 90%;
+    width: 400px;
     position: absolute;
     bottom: -40px;
     display: flex;

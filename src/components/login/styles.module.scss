@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 100vw;
   margin-top: 40px;
 
   form {
@@ -29,6 +27,7 @@
   input {
     padding: 6px 12px;
     text-align: center;
+    font-weight: bold;
     width: 250px;
     height: 30px;
     background-color: rgba(59, 143, 212, 0.308);
@@ -37,14 +36,14 @@
     color: #0f1568;
 
     &:focus {
-      outline: 2px solid blue;
+      outline: 2px solid rgb(9, 83, 143);;
     }
     
   }
   .BtnLogin {
     width: 150px;
     border-radius: 10px;
-    background-color:rgba(0, 59, 107, 0.466);
+    background-color:rgb(134, 158, 228);
     color: white;
     font-size: 16px;
     font-weight: bold;
