@@ -1,0 +1,35 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  width: 100%;
+  h1 {
+    color: white;
+    font-size: 15px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .Footer {
+    align-items: center;
+    ul {
+      width: 50%;
+    }
+    a:hover {
+      background-color: white;
+      color: gray;
+    }
+  }
+}
