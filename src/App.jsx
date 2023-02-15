@@ -15,8 +15,12 @@ function App() {
       console.log("SCOREBOARD: ", scoreboard);
     });
   }, []);
+  return (
+    <div className={styles.App}>
 
-
+      <HomeLayout></HomeLayout>
+    </div>
+  );
 }
 
 export default App;
