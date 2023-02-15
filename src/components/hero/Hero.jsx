@@ -17,7 +17,7 @@ const Hero = () => {
     <div className={styles.Hero}>
       <div className={styles.containerTitle}>
         <h1 className={styles.title}>Quiz-Zone!</h1>
-        <img className={styles.logo} src="./../lite2.gif" alt="Logo" />
+        <img className={styles.logo} src="./../logo.png" alt="Logo" />
       </div>
       <p className={styles.description}>
         Benvenuto al <b>Quiz-Zone</b>, dove potrai testare le tue conoscenze in
