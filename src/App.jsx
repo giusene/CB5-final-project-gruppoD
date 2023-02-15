@@ -20,7 +20,10 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <HomeLayout></HomeLayout>
+      <HomeLayout>
+        <Login />
+        <Footer />
+      </HomeLayout>
     </div>
   );
 }

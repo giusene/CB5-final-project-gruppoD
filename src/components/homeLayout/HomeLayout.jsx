@@ -6,7 +6,7 @@ import avatar2 from "./img/avatar2.png";
 import eye from "./img/eye.png";
 
 import { useState, useEffect, useRef } from "react";
-export default function HomeLayout() {
+export default function HomeLayout({ children }) {
   const [mouseCoordinates, setMouseCoordinates] = useState({ x: 0, y: 0 });
   const eyeLeft = useRef();
 
@@ -36,10 +36,11 @@ export default function HomeLayout() {
 
   return (
     <div className={styles.Layout}>
+      {children}
       <video className={styles.background} autoPlay loop muted>
         <source src={background} type="video/mp4" />
       </video>
-      <div className={styles.images}>
+      {/* <div className={styles.images}>
         <img className={styles.avatar1} src={avatar1} alt="avatar" />
         <img className={styles.avatar2} src={avatar2} alt="avatar" />
 
@@ -88,7 +89,7 @@ export default function HomeLayout() {
           />
         </div>
       </div>
-      <img />
+      <img /> */}
     </div>
   );
 }
