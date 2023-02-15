@@ -1,24 +1,26 @@
 .Footer {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  align-items: center;
+  background-color: white;
   width: 100%;
   bottom: 0;
   h1 {
-    color: white;
+    color: rgb(0, 59, 107);
     font-size: 15px;
   }
 
   ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 90%;
     list-style-type: none;
     padding-left: 5px;
   }
 
   a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 59, 107);
   }
 }
 
@@ -29,7 +31,6 @@
       width: 50%;
     }
     a:hover {
-      background-color: white;
       color: gray;
     }
   }
