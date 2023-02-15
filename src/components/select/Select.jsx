@@ -1,68 +1,73 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
-import Select, { components } from "react-select";
 
 const options = [
   {
     value: "antonella",
     title: "Captain Anto",
-    image: (
-      <div>
-        <img src={"https://picsum.photos/200/300"} />
-      </div>
-    ),
+    image: "https://picsum.photos/200/300?1",
   },
   {
     value: "carlotta",
     title: "Iron Carly",
-    image: (
-      <div>
-        <img src={"https://picsum.photos/200/300"} />
-      </div>
-    ),
+    image: "https://picsum.photos/200/300?2",
   },
   {
     value: "francesca",
-    title: "",
-    image: (
-      <div>
-        <img src={"https://picsum.photos/200/300"} />
-      </div>
-    ),
+    title: "Fantastic Fra",
+    image: "https://picsum.photos/200/300?3",
+  },
+  {
+    value: "martina",
+    title: "Wonder Marty",
+    image: "https://picsum.photos/200/300?4",
+  },
+  {
+    value: "davin",
+    title: "Hulk Davy",
+    image: "https://picsum.photos/200/300?5",
   },
 ];
 
-const SingleValue = (props) => {
-  const { title, image } = props.getValue()[0];
+export default function Select() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSelectOption = (option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+  };
 
   return (
-    <components.SingleValue {...props}>
-      <span>{title}</span> <span>{image}</span>
-    </components.SingleValue>
-  );
-};
-const Option = (props) => {
-  const { title, image } = props.data;
-
-  return (
-    <components.Option {...props}>
-      <span>{title}</span> <span>{image}</span>
-    </components.Option>
-  );
-};
-
-export default function App() {
-  return (
-    <div className="App">
-      <Select
-        className={styles.Select}
-        classNamePrefix="react-select"
-        isSearchable={false}
-        options={options}
-        getOptionLabel={(options) => {
-          return `${options.title} ${options.image}`;
-        }}
-        components={{ SingleValue, Option }}
-      />
+    <div className={styles.Select}>
+      <div onClick={handleToggle} className={styles.SelectedOption}>
+        {selectedOption ? (
+          <>
+            <span>{selectedOption.title}</span>
+            <img src={selectedOption.image} alt={selectedOption.title} />
+          </>
+        ) : (
+          "Select..."
+        )}
+      </div>
+      {isOpen && (
+        <div className={styles.Options}>
+          {options.map((option) => (
+            <div
+              key={option.value}
+              onClick={() => handleSelectOption(option)}
+              className={styles.Option}
+            >
+              <span>{option.title}</span>
+              <img src={option.image} alt={option.title} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
