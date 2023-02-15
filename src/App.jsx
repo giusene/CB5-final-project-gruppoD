@@ -19,7 +19,6 @@ function App() {
   return (
     <div className={styles.App}>
       <h1>CIAO A TUTTI</h1>
-      <Login />
     </div>
   );
 }
