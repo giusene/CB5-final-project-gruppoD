@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.scss";
-import Footer from "./components/footer/Footer";
 
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
