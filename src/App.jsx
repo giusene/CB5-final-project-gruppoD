@@ -17,8 +17,6 @@ function App() {
   }, []);
   return (
     <div className={styles.App}>
-
-      <HomeLayout></HomeLayout>
     </div>
   );
 }
