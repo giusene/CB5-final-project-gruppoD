@@ -5,27 +5,27 @@ const options = [
   {
     value: "antonella",
     title: "Captain Anto",
-    image: "https://picsum.photos/200/300?1",
+    image: "./antonella.png",
   },
   {
     value: "carlotta",
     title: "Iron Carly",
-    image: "https://picsum.photos/200/300?2",
+    image: "./carlotta.png",
   },
   {
     value: "francesca",
     title: "Fantastic Fra",
-    image: "https://picsum.photos/200/300?3",
+    image: "./francesca.png",
   },
   {
     value: "martina",
     title: "Wonder Marty",
-    image: "https://picsum.photos/200/300?4",
+    image: "./martina.png",
   },
   {
     value: "davin",
     title: "Hulk Davy",
-    image: "https://picsum.photos/200/300?5",
+    image: "./davin.png",
   },
 ];
 
