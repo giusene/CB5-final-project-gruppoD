@@ -41,7 +41,31 @@ export default function HomeLayout() {
       </video>
       <div className={styles.images}>
         <img className={styles.avatar1} src={avatar1} alt="avatar" />
-        <img className={styles.avatar2} src={avatar2} alt="avatar" />
+        <div className={styles.avatar2}>
+          <img className={styles.avatar2} src={avatar2} alt="avatar" />
+          <img
+            ref={eyeLeft}
+            style={{
+              top: 121,
+              left: 340,
+              width: 14,
+              transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+            }}
+            src={eye}
+            className={styles.eye}
+          />
+          <img
+            ref={eyeLeft}
+            style={{
+              top: 108,
+              left: 370,
+              width: 14,
+              transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+            }}
+            src={eye}
+            className={styles.eye}
+          />
+        </div>
 
         <div className={styles.eyes}>
           <img
@@ -59,28 +83,6 @@ export default function HomeLayout() {
             style={{
               top: 273,
               left: 83,
-              transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-            }}
-            src={eye}
-            className={styles.eye}
-          />
-          <img
-            ref={eyeLeft}
-            style={{
-              top: 121,
-              left: 333,
-              width: 14,
-              transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-            }}
-            src={eye}
-            className={styles.eye}
-          />
-          <img
-            ref={eyeLeft}
-            style={{
-              top: 108,
-              left: 370,
-              width: 14,
               transform: `rotate(${calcAngle(eyeLeft)}deg)`,
             }}
             src={eye}
