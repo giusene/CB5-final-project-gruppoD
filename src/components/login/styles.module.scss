@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 400px;
   width: 100vw;
+  margin-top: 40px;
 
   form {
     display: flex;
@@ -14,8 +15,11 @@
     gap: 10px;
     border-radius: 8px;
     height: 400px;
-    width: 600px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    width: 100%;
+
+    h2 {
+      color: rgb(9, 83, 143);
+    }
   }
   img {
     height: 100px;
@@ -23,16 +27,21 @@
     border-radius: 100%;
   }
   input {
-    padding: 6px, 12px;
+    padding: 6px 12px;
+    text-align: center;
     width: 250px;
     height: 30px;
+    background-color: rgba(59, 143, 212, 0.308);
+    border-radius: 20px;
+    border: none;
+    color: #0f1568;
   }
   .BtnLogin {
     width: 150px;
     border-radius: 10px;
-    background-color: black;
+    background-color: rgb(245, 127, 239);
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     &:hover {
       background-color: white;

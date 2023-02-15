@@ -9,11 +9,10 @@
   .containerTitle {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 
     .title {
-      font-family: "Macondo", cursive;
       font-size: 35px;
+      color: rgb(9, 83, 143);
       margin-right: 20px;
       transform: translateY(-20px);
       animation: fadeInUp 1s forwards;
@@ -30,26 +29,33 @@
   .description {
     font-size: 15px;
     text-align: center;
+    color: rgb(0, 59, 107);
     transform: translateY(-20px);
     animation: fadeInUp 1s 0.4s forwards;
   }
 
   .btnScore {
     border: none;
-    border-radius: 50%;
-    background-color: #333;
-    color: #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 59, 107, 0.466);
+    color: #eeeeee;
+    padding-left: 10px;
     cursor: pointer;
-    font-size: 35px;
-    height: 80px;
-    width: 80px;
+    font-size: 20px;
+    height: 50px;
+    width: 90%;
     position: absolute;
-    bottom: -65px;
-    right: 50px;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInDown 1s 0.6s forwards;
-
+    span {
+      font-size: 30px;
+    }
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -61,7 +67,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(78, 123, 165, 0.582);
     display: flex;
     justify-content: center;
     align-items: center;
