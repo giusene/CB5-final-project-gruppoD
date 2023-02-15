@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./App.module.scss";
-
+import Login from "./components/login/Login";
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 import HomeLayout from "./components/homeLayout/HomeLayout";

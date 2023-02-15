@@ -1,0 +1,66 @@
+.Select {
+  .Selectcontrol {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    font-size: 14px;
+    height: 36px;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+
+    &:hover {
+      border-color: #888;
+    }
+
+    &:focus {
+      border-color: #555;
+    }
+  }
+
+  .Selectvalue-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .Selectsingle-value {
+    margin-left: 10px;
+  }
+
+  .Selectindicator-separator {
+    display: none;
+  }
+
+  .Selectdropdown-indicator {
+    color: #555;
+    padding: 4px;
+  }
+
+  .Selectmenu {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: -1px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .Select__option {
+      align-items: center;
+      display: flex;
+      padding: 8px;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      &.is-selected {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
