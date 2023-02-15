@@ -17,6 +17,10 @@ function App() {
   }, []);
   return (
     <div className={styles.App}>
+      <HomeLayout>
+        <Login />
+        <Footer />
+      </HomeLayout>
     </div>
   );
 }
