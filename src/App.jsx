@@ -6,6 +6,7 @@ import Hero from "./components/hero/Hero";
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 import HomeLayout from "./components/homeLayout/HomeLayout";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
@@ -28,18 +29,21 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.App}>
-      {showModal && (
-        <div className={styles.modal}>
-          <img src="./../logo-iniziale.gif" />
-        </div>
-      )}
-      <HomeLayout>
-        <Hero />
-        <Login />
-        <Footer />
-      </HomeLayout>
-    </div>
+    <>
+      <div className={styles.App}>
+        {showModal && (
+          <div className={styles.modal}>
+            <img src="./../logo-iniziale.gif" />
+          </div>
+        )}
+        <HomeLayout>
+          <Hero />
+          <Login />
+          <Footer />
+        </HomeLayout>
+      </div>
+      <Outlet />
+    </>
   );
 }
 
