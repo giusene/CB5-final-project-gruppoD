@@ -9,7 +9,7 @@ const GamePage = () => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
-    GET("100").then(res => {
+    GET("100").then((res) => {
       console.log(res.results);
       setPost(res.results);
     });
@@ -29,7 +29,7 @@ const GamePage = () => {
           <h2>{post.body}</h2>
         </div>
 
-        <h3>questa sarà la barra del tempo</h3>
+        <TimeBar />
         <div className={styles.AnswerContainer}>
           <div className={styles.Answer}>
             <h3>risposta numero 1</h3>
@@ -49,7 +49,7 @@ const GamePage = () => {
           </div>
         </div>
       </div>
-      <TimeBar />
+
       <Outlet />
     </>
   );
