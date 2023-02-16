@@ -36,15 +36,11 @@
       transform: rotate(-20deg);
     }
 
-    .eyes {
+    .eye {
       position: absolute;
 
-      .eye {
-        position: absolute;
-
-        border-radius: 20px;
-        width: 10px;
-      }
+      border-radius: 20px;
+      width: 10px;
     }
   }
 }
