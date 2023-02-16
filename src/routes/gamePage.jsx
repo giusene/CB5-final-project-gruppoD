@@ -2,15 +2,15 @@ import { Outlet } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-function GamePage() {
-  const { postID } = useParams();
+import { textReplacer } from "../utils/textReplacer";
 
-  const [post, setPost] = useState({});
+function GamePage() {
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
-    GET(`posts/${postID}`).then((res) => {
-      setPost(res);
+    GET("100").then(res => {
+      console.log(res.results);
+      setPost(res.results);
     });
     return GamePage;
   }, []);
@@ -23,6 +23,9 @@ function GamePage() {
             <h4>Nome Utente</h4>
             <img src="https://picsum.photos/50/50" alt="Avatar" />
           </div>
+          {post.map((item, index) => (
+            <p key={index}>{textReplacer(item.question)}</p>
+          ))}
           <h2>{post.body}</h2>
         </div>
 

@@ -1,6 +1,6 @@
-const BASE_URL = "https://dummyjson.com/";
+const BASE_URL = "https://opentdb.com/api.php?amount=";
 
-const GET = async (endpoint) => {
+const GET = async endpoint => {
   const res = await fetch(BASE_URL + endpoint);
   return res.json();
 };
