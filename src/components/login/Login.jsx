@@ -2,6 +2,7 @@ import { useState } from "react";
 import SelectOptions from "../select/Select";
 import styles from "./styles.module.scss";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
@@ -25,7 +26,9 @@ const Login = (options) => {
           name="username"
           placeholder="Enter your NickName..."
         />
-        <input className={styles.BtnLogin} type="submit" value="Login" />
+        <Link to={"/gamePage"}>
+          <input className={styles.BtnLogin} type="submit" value="Login" />
+        </Link>
       </form>
 
       <p></p>
