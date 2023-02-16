@@ -4,7 +4,7 @@ import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 
-function GamePage() {
+const GamePage = () => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,6 @@ function GamePage() {
       console.log(res.results);
       setPost(res.results);
     });
-    return GamePage;
   }, []);
 
   return (
@@ -52,5 +51,5 @@ function GamePage() {
       <Outlet />
     </>
   );
-}
+};
 export default GamePage;
