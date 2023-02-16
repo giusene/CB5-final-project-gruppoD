@@ -29,14 +29,14 @@
       color: rgb(9, 83, 143);
       margin-right: 20px;
       transform: translateY(-20px);
-      animation: fadeInUp 1s forwards;
+      animation: fadeInUp 1s 5s forwards;
     }
 
     .logo {
       width: 100px;
       opacity: 0;
       transform: translateY(-20px);
-      animation: fadeInUp 1s 0.2s forwards;
+      animation: fadeInUp 1s 5s forwards;
     }
   }
 
@@ -45,7 +45,7 @@
     text-align: center;
     color: rgb(0, 59, 107);
     transform: translateY(-20px);
-    animation: fadeInUp 1s 0.4s forwards;
+    animation: fadeInUp 1s 5s forwards;
   }
 
   .btnScore {
@@ -57,7 +57,7 @@
     cursor: pointer;
     font-size: 20px;
     height: 50px;
-    width: 90%;
+    width: 400px;
     position: absolute;
     bottom: -40px;
     display: flex;
@@ -66,7 +66,7 @@
     gap: 10px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInDown 1s 0.6s forwards;
+    animation: fadeInDown 1s 5s forwards;
     span {
       font-size: 30px;
     }
