@@ -22,7 +22,7 @@ function App() {
 
     const timer = setTimeout(() => {
       setShowModal(false);
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +31,7 @@ function App() {
     <div className={styles.App}>
       {showModal && (
         <div className={styles.modal}>
-          <img src="./../Quiz-zone_Logo_Finale.gif" />
+          <img src="./../logo-iniziale.gif" />
         </div>
       )}
       <HomeLayout>
