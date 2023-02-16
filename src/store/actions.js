@@ -1,0 +1,4 @@
+export const actions = {
+  SET_USERNAME: "SET_USERNAME",
+  REMOVE_USERNAME: "REMOVE_USERNAME",
+};
