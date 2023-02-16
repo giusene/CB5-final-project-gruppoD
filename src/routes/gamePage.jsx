@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
+import TimeBar from "../components/timeBar/TimeBar";
 
 const GamePage = () => {
   const [post, setPost] = useState([]);
@@ -48,6 +49,7 @@ const GamePage = () => {
           </div>
         </div>
       </div>
+      <TimeBar />
       <Outlet />
     </>
   );
