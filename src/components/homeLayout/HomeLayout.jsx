@@ -33,6 +33,4 @@ export default function HomeLayout({ children }) {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
-  return <></>;
 }
