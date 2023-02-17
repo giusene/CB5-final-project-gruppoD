@@ -1,11 +1,16 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.scss";
-
+import Login from "./components/login/Login";
+import Footer from "./components/footer/Footer";
+import Hero from "./components/hero/Hero";
 import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 import HomeLayout from "./components/homeLayout/HomeLayout";
+import { Outlet } from "react-router-dom";
 
 function App() {
+  const [showModal, setShowModal] = useState(true);
+
   useEffect(() => {
     const starCountRef = ref(database);
 
@@ -15,12 +20,30 @@ function App() {
 
       console.log("SCOREBOARD: ", scoreboard);
     });
+
+    const timer = setTimeout(() => {
+      setShowModal(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className={styles.App}>
-      <HomeLayout></HomeLayout>
-    </div>
+    <>
+      <div className={styles.App}>
+        {showModal && (
+          <div className={styles.modal}>
+            <img src="./../logo-iniziale.gif" />
+          </div>
+        )}
+        <HomeLayout>
+          <Hero />
+          <Login />
+          <Footer />
+        </HomeLayout>
+      </div>
+      <Outlet />
+    </>
   );
 }
 
