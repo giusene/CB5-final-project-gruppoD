@@ -1,0 +1,54 @@
+.GamePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  .Question {
+    border: 2px solid red;
+
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+
+    h3 {
+      color: rgb(9, 83, 143);
+    }
+    .userInfo {
+      border: 2px solid orange;
+      display: flex;
+      margin-left: auto;
+      padding: 2px 4px;
+      border-radius: 4px;
+
+      img {
+        width: 40px;
+        height: 60px;
+      }
+    }
+  }
+
+  .AnswerContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+
+    .Answer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-radius: 8px;
+      border: 2px solid black;
+      margin-bottom: 10px;
+      width: 60%;
+      padding: 6px 12px;
+    }
+  }
+}
