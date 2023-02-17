@@ -33,4 +33,67 @@ export default function HomeLayout({ children }) {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+  return (
+    <>
+      <div className={styles.Layout}>
+        <video className={styles.background} autoPlay loop muted>
+          <source src={background} type="video/mp4" />
+        </video>
+        <div className={styles.images}>
+          <div className={styles.avatar1}>
+            <img className={styles.avatar1} src={avatar1} alt="avatar" />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 79,
+                left: 59,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 93,
+                left: 84,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+          </div>
+
+          <div className={styles.avatar2}>
+            <img className={styles.avatar2} src={avatar2} alt="avatar" />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 91,
+                left: 59,
+                width: 14,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 77,
+                left: 94,
+                width: 14,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+          </div>
+        </div>
+        <div className={styles.Children}>{children}</div>
+      </div>
+
+      <Outlet />
+    </>
+  );
 }
