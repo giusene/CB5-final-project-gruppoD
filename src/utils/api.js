@@ -1,4 +1,4 @@
-const BASE_URL = "https://opentdb.com/api.php?amount=10&difficulty=";
+const BASE_URL = "https://opentdb.com/api.php?amount=50&difficulty=";
 const anwsersType = "&type=multiple";
 
 const GET = async (difficulty) => {

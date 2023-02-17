@@ -27,6 +27,46 @@ const GamePage = () => {
       });
       setQuestions(newQuestions);
     });
+    setTimeout(
+      () =>
+        GET("medium").then((res) => {
+          let newQuestions = res.results.map((item) => {
+            const newItem = {
+              ...item,
+              allQuestions: sortArrayRandomly([
+                item.correct_answer,
+                item.incorrect_answers[0],
+                item.incorrect_answers[1],
+                item.incorrect_answers[2],
+              ]),
+            };
+            return newItem;
+          });
+
+          setQuestions(newQuestions);
+        }),
+      60000
+    );
+    setTimeout(
+      () =>
+        GET("hard").then((res) => {
+          let newQuestions = res.results.map((item) => {
+            const newItem = {
+              ...item,
+              allQuestions: sortArrayRandomly([
+                item.correct_answer,
+                item.incorrect_answers[0],
+                item.incorrect_answers[1],
+                item.incorrect_answers[2],
+              ]),
+            };
+            return newItem;
+          });
+
+          setQuestions(newQuestions);
+        }),
+      120000
+    );
   }, []);
 
   const getAnswer = (answer) => {
@@ -55,6 +95,7 @@ const GamePage = () => {
         <TimeBar />
         <div className={styles.AnswerContainer}>
           <div className={styles.Answer}>
+            <h4>Right Answer: {score}</h4>
             {questions[questionNumber] &&
               questions[questionNumber].allQuestions.map((item, index) => (
                 <p onClick={() => getAnswer(textReplacer(item))} key={index}>
