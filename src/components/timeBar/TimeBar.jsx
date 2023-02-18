@@ -12,7 +12,10 @@ const TimeBar = () => {
         const newProgress = prevProgress + 1;
         if (newProgress >= 59) {
           clearInterval(intervalRef.current);
-          setProgress(0);
+          console.log(fillCount);
+          if (fillCount < 2) {
+            setProgress(0);
+          }
           setFillCount((prevCount) => prevCount + 1);
         }
         return newProgress;
@@ -24,7 +27,7 @@ const TimeBar = () => {
 
   useEffect(() => {
     if (fillCount >= 3) {
-      setFillCount(0);
+      clearInterval(intervalRef.current);
     }
   }, [fillCount]);
 
