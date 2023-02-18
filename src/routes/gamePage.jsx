@@ -69,13 +69,27 @@ const GamePage = () => {
     );
   }, []);
 
-  const getAnswer = (answer) => {
-    if (answer === questions[questionNumber].correct_answer) {
+  const getAnswer = (answerIndex) => {
+    const selectedAnswer = questions[questionNumber].allQuestions[answerIndex];
+    if (selectedAnswer === questions[questionNumber].correct_answer) {
       setScore(score + 1);
     }
-    setQuestionNumber(questionNumber + 1);
+    const selectedAnswerElement = document.querySelector(
+      `p[data-answer="${textReplacer(selectedAnswer)}"]`
+    );
+    if (selectedAnswerElement) {
+      selectedAnswerElement.style.color =
+        selectedAnswer === questions[questionNumber].correct_answer
+          ? "green"
+          : "red";
+    }
+
+    setTimeout(() => {
+      setQuestionNumber(questionNumber + 1);
+    }, 500);
     console.log(score);
   };
+
   return (
     <>
       <div className={styles.GamePage}>
@@ -84,9 +98,6 @@ const GamePage = () => {
             <h4>Nome Utente</h4>
             <img src="https://picsum.photos/50/50" alt="Avatar" />
           </div>
-          {/* {questions.map((item, index) => (
-            <p key={index}>{textReplacer(item.question)}</p>
-          ))} */}
           {questions[questionNumber] && (
             <h2>{textReplacer(questions[questionNumber].question)}</h2>
           )}
@@ -98,16 +109,20 @@ const GamePage = () => {
             <h4>Right Answer: {score}</h4>
             {questions[questionNumber] &&
               questions[questionNumber].allQuestions.map((item, index) => (
-                <p onClick={() => getAnswer(textReplacer(item))} key={index}>
+                <p
+                  onClick={() => getAnswer(index)}
+                  key={index}
+                  data-answer={textReplacer(item)}
+                >
                   {textReplacer(item)}
                 </p>
               ))}
           </div>
         </div>
+        <Outlet />
       </div>
-
-      <Outlet />
     </>
   );
 };
+
 export default GamePage;
