@@ -5,7 +5,8 @@ export const textReplacer = (text) => {
     .replace(/&eacute;/g, "é")
     .replace(/&micro;/g, "µ")
     .replace(/&rdquo;/g, "”")
-    .replace(/&idquo;/g, "“");
+    .replace(/&idquo;/g, "“")
+    .replace(/&deg;/g, "°");
 
   return newText;
 };

@@ -1,5 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
@@ -7,6 +9,8 @@ import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
 
 const GamePage = () => {
+  const navigate = useNavigate();
+
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
@@ -79,6 +83,7 @@ const GamePage = () => {
   return (
     <>
       <div className={styles.GamePage}>
+        <button className={styles.BtnHome} onClick={() => navigate("/")}>Go back to Homepage</button>
         <div className={styles.Question}>
           <div className={styles.userInfo}>
             <h4>Nome Utente</h4>
@@ -93,17 +98,19 @@ const GamePage = () => {
         </div>
 
         <TimeBar />
+
         <div className={styles.AnswerContainer}>
           <div className={styles.Answer}>
-            <h4>Right Answer: {score}</h4>
+            <h4>Right Answer(s): {score}</h4>
             {questions[questionNumber] &&
               questions[questionNumber].allQuestions.map((item, index) => (
-                <p onClick={() => getAnswer(textReplacer(item))} key={index}>
+                <h5 onClick={() => getAnswer(textReplacer(item))} key={index}>
                   {textReplacer(item)}
-                </p>
+                </h5>
               ))}
           </div>
         </div>
+        <button className={styles.BtnRefresh} onClick={() => window.location.reload()}><FontAwesomeIcon icon={faRotate} /></button>
       </div>
 
       <Outlet />
