@@ -10,6 +10,9 @@ import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
+import first from "./backgrounds/first.webm";
+import second from "./backgrounds/second.webm";
+import third from "./backgrounds/third.webm";
 
 import ModalScore from "./../components/modalScore/ModalScore";
 
@@ -19,6 +22,7 @@ const GamePage = () => {
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
+  const [backgroundControl, setBackgroundControl] = useState(0);
 
   useEffect(() => {
     GET("easy").then((res) => {
@@ -53,6 +57,8 @@ const GamePage = () => {
           });
 
           setQuestions(newQuestions);
+          setBackgroundControl(1);
+          console.log(backgroundControl);
         }),
       60000
     );
@@ -73,6 +79,7 @@ const GamePage = () => {
           });
 
           setQuestions(newQuestions);
+          setBackgroundControl(2);
         }),
       120000
     );
@@ -102,9 +109,37 @@ const GamePage = () => {
         </Link>
       </div>
       <div className={styles.GamePage}>
-        {/* <video className={styles.background} autoPlay loop muted>
-          <source src={background} type="video/mp4" />
-        </video> */}
+        <video
+          className={`${styles.background} ${
+            backgroundControl !== 0 && styles.noBackground
+          }`}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={first} type="video/mp4" />
+        </video>
+
+        <video
+          className={`${styles.background} ${
+            backgroundControl !== 1 && styles.noBackground
+          }`}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={second} type="video/mp4" />
+        </video>
+        <video
+          className={`${styles.background} ${
+            backgroundControl !== 2 && styles.noBackground
+          }`}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={third} type="video/mp4" />
+        </video>
         <button className={styles.BtnHome} onClick={() => navigate("/")}>
           Go back to Homepage
         </button>
