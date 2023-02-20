@@ -1,13 +1,17 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faRotate, faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
+
 import background from "./backgrounds/TERZA_MANCHE_FINALE.mp4";
+
+import ModalScore from './../components/modalScore/ModalScore';
+
 
 const GamePage = () => {
   const navigate = useNavigate();
@@ -84,15 +88,25 @@ const GamePage = () => {
     setQuestionNumber(questionNumber + 1);
     console.log(score);
   };
+
   return (
     <>
+      <div className={styles.Buttons}>
+        <button className={styles.BtnHome} onClick={() => navigate("/")}><FontAwesomeIcon icon={faHouseChimneyUser} /></button>
+        <Link to=".">
+          <button className={styles.BtnRefresh}><FontAwesomeIcon icon={faRotate} /></button>
+        </Link>
+      </div>
       <div className={styles.GamePage}>
+
         <video className={styles.background} autoPlay loop muted>
           <source src={background} type="video/mp4" />
         </video>
         <button className={styles.BtnHome} onClick={() => navigate("/")}>
           Go back to Homepage
         </button>
+
+
         <div className={styles.Question}>
           <div className={styles.userInfo}>
             <h4>Nome Utente</h4>
@@ -123,15 +137,19 @@ const GamePage = () => {
               ))}
           </div>
         </div>
+
         <div>
           <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
             <FontAwesomeIcon icon={faRotate} />
           </button>
         </div>
+
       </div>
 
       <Outlet />
+      <ModalScore score={score} />
     </>
   );
 };
+
 export default GamePage;
