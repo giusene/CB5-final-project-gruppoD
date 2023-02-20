@@ -93,6 +93,10 @@ export default function HomeLayout({ children }) {
         </div>
         <div className={styles.Children}>{children}</div>
       </div>
+
+
+      <Outlet />
+
     </>
   );
 }

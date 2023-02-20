@@ -1,27 +1,43 @@
-import { useState, useEffect } from 'react';
-import styles from './styles.module.scss';
+import { useState, useEffect, useRef } from "react";
+import styles from "./styles.module.scss";
 
 const TimeBar = () => {
   const [progress, setProgress] = useState(0);
+  const [fillCount, setFillCount] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setProgress((prevProgress) => prevProgress + 1);
+    intervalRef.current = setInterval(() => {
+      setProgress((prevProgress) => {
+        const newProgress = prevProgress + 1;
+        if (newProgress >= 59) {
+          clearInterval(intervalRef.current);
+          console.log(fillCount);
+          if (fillCount < 2) {
+            setProgress(0);
+          }
+          setFillCount((prevCount) => prevCount + 1);
+        }
+        return newProgress;
+      });
     }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearInterval(intervalRef.current);
+  }, [fillCount]);
 
-  let barColor;
-  if (progress >= 25) {
-    barColor = 'rgb(255, 0, 0)'; 
-  } else if (progress >= 20) {
-    barColor = 'rgb(255, 106, 106)'; 
-  } else {
-    barColor = 'rgb(134, 158, 228)'; 
-  }
+  useEffect(() => {
+    if (fillCount >= 3) {
+      clearInterval(intervalRef.current);
+    }
+  }, [fillCount]);
 
-  const barWidth = `${(progress / 30) * 100}%`;
+  const barWidth = ` ${(progress / 59) * 100}%`;
+  const barColor =
+    progress >= 55
+      ? "rgb(255, 0, 0)"
+      : progress >= 50
+      ? "rgb(255, 106, 106)"
+      : "rgb(134, 158, 228)";
 
   return (
     <div className={styles.container}>
@@ -36,4 +52,3 @@ const TimeBar = () => {
 };
 
 export default TimeBar;
-
