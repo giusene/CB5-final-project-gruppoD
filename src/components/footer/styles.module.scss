@@ -1,0 +1,37 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  bottom: 0;
+  h1 {
+    color: rgb(0, 59, 107);
+    font-size: 15px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    list-style-type: none;
+    padding-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(0, 59, 107);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .Footer {
+    align-items: center;
+    ul {
+      width: 50%;
+    }
+    a:hover {
+      color: gray;
+    }
+  }
+}

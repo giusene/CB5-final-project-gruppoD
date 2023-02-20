@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .TimeBar {
+    width: 300px;
+    border-radius: 20px;
+    height: 15px;
+    background-color: lightgray;
+  
+    .wid {
+      height: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      background-color: rgb(134, 158, 228);
+      transition: width 1s linear;
+  
+    }
+  }
+  

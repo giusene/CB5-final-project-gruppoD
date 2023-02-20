@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import background from "./img/background.mp4";
 import avatar1 from "./img/avatar1.png";
 import avatar2 from "./img/avatar2.png";
-
+import { Outlet } from "react-router-dom";
 import eye from "./img/eye.png";
 
 import { useState, useEffect, useRef } from "react";
@@ -33,6 +33,7 @@ export default function HomeLayout({ children }) {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
 
   return (
     <>
@@ -95,4 +96,6 @@ export default function HomeLayout({ children }) {
       </div>
     </>
   );
-}
+
+
+

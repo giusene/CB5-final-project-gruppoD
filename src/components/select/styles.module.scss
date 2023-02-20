@@ -1,0 +1,58 @@
+.Select {
+  position: relative;
+  width: 300px;
+  font-size: 16px;
+
+  .SelectedOption { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(248, 251, 251);
+    border-radius: 5px;
+    cursor: pointer;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+  }
+
+  .Options {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid rgb(128, 128, 189);
+    border-radius: 5px;
+    background-color: rgb(134, 158, 228);
+    z-index: 1;
+
+    .Option {
+      border: 0.5px solid rgb(55, 55, 170);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f4f4f4;
+        color: blue;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+    }
+  }
+}
