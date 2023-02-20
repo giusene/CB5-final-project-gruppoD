@@ -34,7 +34,6 @@ export default function HomeLayout({ children }) {
     };
   }, []);
 
-
   return (
     <>
       <div className={styles.Layout}>
@@ -96,6 +95,4 @@ export default function HomeLayout({ children }) {
       </div>
     </>
   );
-
-
-
+}
