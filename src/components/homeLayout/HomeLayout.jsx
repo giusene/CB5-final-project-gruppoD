@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import background from "./img/background.webm";
+import background from "./img/background.mp4";
 import avatar1 from "./img/avatar1.png";
 import avatar2 from "./img/avatar2.png";
 import { Outlet } from "react-router-dom";
@@ -33,6 +33,7 @@ export default function HomeLayout({ children }) {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
   return (
     <>
       <div className={styles.Layout}>
@@ -93,7 +94,9 @@ export default function HomeLayout({ children }) {
         <div className={styles.Children}>{children}</div>
       </div>
 
+
       <Outlet />
+
     </>
   );
 }
