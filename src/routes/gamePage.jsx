@@ -98,10 +98,12 @@ const GamePage = () => {
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
           </button>
-          <Link to=".">
-            <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
-              <FontAwesomeIcon icon={faRotate} />
-            </button>
+          <Link
+            to="gamePage"
+            className={styles.BtnRefresh}
+            onClick={() => window.location.reload()}
+          >
+            <FontAwesomeIcon icon={faRotate} />
           </Link>
         </div>
 
