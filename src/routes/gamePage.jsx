@@ -98,7 +98,6 @@ const GamePage = () => {
 
   return (
     <>
-
       <div className={styles.GamePage}>
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
@@ -110,7 +109,16 @@ const GamePage = () => {
             </button>
           </Link>
         </div>
-
+        <video
+          className={`${styles.background} ${
+            backgroundControl !== 0 && styles.noBackground
+          }`}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={first} type="video/mp4" />
+        </video>
         <video
           className={`${styles.background} ${
             backgroundControl !== 1 && styles.noBackground
@@ -131,7 +139,6 @@ const GamePage = () => {
         >
           <source src={third} type="video/mp4" />
         </video>
-
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -163,7 +170,6 @@ const GamePage = () => {
               ))}
           </div>
         </div>
-
       </div>
 
       <Outlet />
