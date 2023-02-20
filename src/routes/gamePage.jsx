@@ -1,17 +1,17 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotate, faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faRotate,
+  faHouseChimneyUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
 
-import background from "./backgrounds/TERZA_MANCHE_FINALE.mp4";
-
-import ModalScore from './../components/modalScore/ModalScore';
-
+import ModalScore from "./../components/modalScore/ModalScore";
 
 const GamePage = () => {
   const navigate = useNavigate();
@@ -92,20 +92,22 @@ const GamePage = () => {
   return (
     <>
       <div className={styles.Buttons}>
-        <button className={styles.BtnHome} onClick={() => navigate("/")}><FontAwesomeIcon icon={faHouseChimneyUser} /></button>
+        <button className={styles.BtnHome} onClick={() => navigate("/")}>
+          <FontAwesomeIcon icon={faHouseChimneyUser} />
+        </button>
         <Link to=".">
-          <button className={styles.BtnRefresh}><FontAwesomeIcon icon={faRotate} /></button>
+          <button className={styles.BtnRefresh}>
+            <FontAwesomeIcon icon={faRotate} />
+          </button>
         </Link>
       </div>
       <div className={styles.GamePage}>
-
-        <video className={styles.background} autoPlay loop muted>
+        {/* <video className={styles.background} autoPlay loop muted>
           <source src={background} type="video/mp4" />
-        </video>
+        </video> */}
         <button className={styles.BtnHome} onClick={() => navigate("/")}>
           Go back to Homepage
         </button>
-
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -143,7 +145,6 @@ const GamePage = () => {
             <FontAwesomeIcon icon={faRotate} />
           </button>
         </div>
-
       </div>
 
       <Outlet />
