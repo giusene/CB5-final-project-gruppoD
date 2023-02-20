@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import background from "./img/background.webm";
+import background from "./img/background.mp4";
 import avatar1 from "./img/avatar1.png";
 import avatar2 from "./img/avatar2.png";
 
@@ -93,8 +93,6 @@ export default function HomeLayout({ children }) {
         </div>
         <div className={styles.Children}>{children}</div>
       </div>
-
-      <Outlet />
     </>
   );
 }
