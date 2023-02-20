@@ -1,28 +1,47 @@
+.Buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  .BtnHome {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color:rgb(134, 158, 228);
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+  
+    &:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .BtnRefresh {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: none;
+    background-color:rgb(134, 158, 228);
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+  
+    &:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
 .GamePage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  
-  .BtnHome {
-    height: 50px;
-    width: 210px;
-    border-radius: 10px;
-    border: none;
-    background-color:rgb(134, 158, 228);
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    align-self: flex-start;
-    margin-left: 20%;
-    margin-bottom: 20px;
-
-    &:hover {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    }
-  }
 
   .Question {
     border: 2px solid rgb(134, 158, 228);
@@ -67,24 +86,6 @@
       border: 2px solid black;
       margin-bottom: 10px;
       padding: 20px;
-    }
-  }
-
-  .BtnRefresh {
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    border: none;
-    background-color:rgb(134, 158, 228);
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    cursor: pointer;
-    align-self: flex-end;
-    margin-right: 20%;
-
-    &:hover {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
 }
