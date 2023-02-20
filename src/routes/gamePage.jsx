@@ -1,7 +1,7 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faRotate, faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
 import { GET } from "../utils/api";
 import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
@@ -80,10 +80,16 @@ const GamePage = () => {
     setQuestionNumber(questionNumber + 1);
     console.log(score);
   };
+
   return (
     <>
+      <div className={styles.Buttons}>
+        <button className={styles.BtnHome} onClick={() => navigate("/")}><FontAwesomeIcon icon={faHouseChimneyUser} /></button>
+        <Link to=".">
+          <button className={styles.BtnRefresh}><FontAwesomeIcon icon={faRotate} /></button>
+        </Link>
+      </div>
       <div className={styles.GamePage}>
-        <button className={styles.BtnHome} onClick={() => navigate("/")}>Go back to Homepage</button>
         <div className={styles.Question}>
           <div className={styles.userInfo}>
             <h4>Nome Utente</h4>
@@ -110,11 +116,11 @@ const GamePage = () => {
               ))}
           </div>
         </div>
-        <button className={styles.BtnRefresh} onClick={() => window.location.reload()}><FontAwesomeIcon icon={faRotate} /></button>
       </div>
 
       <Outlet />
     </>
   );
 };
+
 export default GamePage;
