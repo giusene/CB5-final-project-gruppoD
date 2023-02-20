@@ -7,7 +7,11 @@ import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
+
+import background from "./backgrounds/TERZA_MANCHE_FINALE.mp4";
+
 import ModalScore from './../components/modalScore/ModalScore';
+
 
 const GamePage = () => {
   const navigate = useNavigate();
@@ -73,6 +77,9 @@ const GamePage = () => {
       120000
     );
   }, []);
+  const refreshPage = () => {
+    navigate(0);
+  };
 
   const getAnswer = (answer) => {
     if (answer === questions[questionNumber].correct_answer) {
@@ -91,6 +98,15 @@ const GamePage = () => {
         </Link>
       </div>
       <div className={styles.GamePage}>
+
+        <video className={styles.background} autoPlay loop muted>
+          <source src={background} type="video/mp4" />
+        </video>
+        <button className={styles.BtnHome} onClick={() => navigate("/")}>
+          Go back to Homepage
+        </button>
+
+
         <div className={styles.Question}>
           <div className={styles.userInfo}>
             <h4>Nome Utente</h4>
@@ -107,16 +123,27 @@ const GamePage = () => {
         <TimeBar />
 
         <div className={styles.AnswerContainer}>
-          <div className={styles.Answer}>
-            <h4>Right Answer(s): {score}</h4>
+          <h4>Right Answer(s): {score}</h4>
+          <div className={styles.AnswerGrid}>
             {questions[questionNumber] &&
               questions[questionNumber].allQuestions.map((item, index) => (
-                <h5 onClick={() => getAnswer(textReplacer(item))} key={index}>
+                <h5
+                  className={styles.Answer}
+                  onClick={() => getAnswer(textReplacer(item))}
+                  key={index}
+                >
                   {textReplacer(item)}
                 </h5>
               ))}
           </div>
         </div>
+
+        <div>
+          <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
+            <FontAwesomeIcon icon={faRotate} />
+          </button>
+        </div>
+
       </div>
 
       <Outlet />
