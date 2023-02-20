@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
+import ModalScore from './../components/modalScore/ModalScore';
 
 const GamePage = () => {
   const navigate = useNavigate();
@@ -114,6 +115,7 @@ const GamePage = () => {
       </div>
 
       <Outlet />
+      <ModalScore score={score} />
     </>
   );
 };
