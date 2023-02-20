@@ -70,10 +70,16 @@ const GamePage = () => {
   }, []);
 
   const getAnswer = (answerIndex) => {
+    const allAnswerElements = document.querySelectorAll("p");
+    allAnswerElements.forEach((answerElement) => {
+      answerElement.style.color = "black";
+    });
+
     const selectedAnswer = questions[questionNumber].allQuestions[answerIndex];
     if (selectedAnswer === questions[questionNumber].correct_answer) {
       setScore(score + 1);
     }
+
     const selectedAnswerElement = document.querySelector(
       `p[data-answer="${textReplacer(selectedAnswer)}"]`
     );
