@@ -1,19 +1,12 @@
 import { useState } from "react";
 import { MdSportsScore } from "react-icons/md";
+import { BsInfoCircleFill } from "react-icons/bs";
 import styles from "./styles.module.scss";
 import { Outlet } from "react-router-dom";
+import ModalHome from "../modalHome/ModalHome";
 
 const Hero = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
+  
   return (
     <>
       <div className={styles.Hero}>
@@ -30,30 +23,9 @@ const Hero = () => {
           <b>10 punti</b>. Non perdere tempo, metti alla prova le tue conoscenze
           e raggiungi la cima della classifica!!!
         </p>
-        <button className={styles.btnScore} onClick={openModal}>
-          <h4>Score Record</h4>
-          <span>
-            <MdSportsScore />
-          </span>
-        </button>
-
-        {showModal && (
-          <div className={`${styles.Modal} ${showModal ? styles.open : ""}`}>
-            <div className={styles.Modal}>
-              <div className={styles.modalContent}>
-                <h2 className={styles.modalTitle}>Score</h2>
-                <button className={styles.modalCloseBtn} onClick={closeModal}>
-                  ❌
-                </button>
-                <div className={styles.modalBody}>
-                  {/* visualizza gli score qui */}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-      <Outlet />
+        <ModalHome />
+     </div>
+    <Outlet />
     </>
   );
 };
