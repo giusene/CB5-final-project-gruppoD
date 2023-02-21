@@ -15,8 +15,5 @@ export const textReplacer = (text) => {
     .replace(/&lsquo;/g, "‘")
     .replace(/&rsquo;/g, "’");
 
-
-    .replace(/&sup2;/g, "²");
-
-  return newText;
+  return newText;a
 };
