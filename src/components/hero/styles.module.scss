@@ -25,7 +25,9 @@
     align-items: center;
 
     .title {
-      font-size: 35px;
+      font-family: "Fortnite";
+      text-transform: uppercase;
+      font-size: 45px;
       color: rgb(9, 83, 143);
       margin-right: 20px;
       transform: translateY(-20px);
@@ -41,6 +43,7 @@
   }
 
   .description {
+    font-weight: bold;
     font-size: 15px;
     text-align: center;
     color: rgb(0, 59, 107);
@@ -59,5 +62,3 @@
     transform: translateY(0);
   }
 }
-
-

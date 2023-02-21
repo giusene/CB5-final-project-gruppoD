@@ -105,16 +105,12 @@ const GamePage = () => {
     <>
       <div className={styles.GamePage}>
         <div className={styles.Buttons}>
-          <button 
-            className={styles.BtnHome} 
-            onClick={() => navigate("/")}>
+          <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
           </button>
-          <h1>{text}</h1>
+          <h1 className={styles.Manche}>{text}</h1>
           <Link to=".">
-            <button 
-              className={styles.BtnRefresh} 
-              onClick={() => refreshPage()}>
+            <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
               <FontAwesomeIcon icon={faRotate} />
             </button>
           </Link>
