@@ -6,10 +6,10 @@ export default function FireworksComponent() {
       <Fireworks
         options={{
           rocketsPoint: {
-            min: 20,
+            min: 0,
             max: 100,
           },
-          acceleration: 1.03,
+          acceleration: 1.02,
           sound: {
             enabled: true,
             files: ["explosion0.mp3", "explosion1.mp3", "explosion2.mp3"],
@@ -18,13 +18,14 @@ export default function FireworksComponent() {
               max: 8,
             },
           },
-          explosion: 8,
+          explosion: 3,
+          intensity: 60,
+          traceSpeed: 8,
         }}
         style={{
           width: "100%",
           height: "100%",
           position: "fixed",
-          background: "#000",
         }}
       />
     </>
