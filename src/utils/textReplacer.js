@@ -10,6 +10,13 @@ export const textReplacer = (text) => {
     .replace(/&Uuml;/g, "Ü")
     .replace(/&amp;/g, "&")
     .replace(/&deg;/g, "°")
+
+    .replace(/&Omicron;/g, "Ο")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rsquo;/g, "’");
+
+
     .replace(/&sup2;/g, "²");
+
   return newText;
 };
