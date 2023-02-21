@@ -98,27 +98,18 @@ const GamePage = () => {
 
   return (
     <>
-      <div className={styles.Buttons}>
-        <button className={styles.BtnHome} onClick={() => navigate("/")}>
-          <FontAwesomeIcon icon={faHouseChimneyUser} />
-        </button>
-        <Link to=".">
-          <button className={styles.BtnRefresh}>
-            <FontAwesomeIcon icon={faRotate} />
-          </button>
-        </Link>
-      </div>
+
       <div className={styles.GamePage}>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 0 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={first} type="video/mp4" />
-        </video>
+        <div className={styles.Buttons}>
+          <button className={styles.BtnHome} onClick={() => navigate("/")}>
+            <FontAwesomeIcon icon={faHouseChimneyUser} />
+          </button>
+          <Link to=".">
+            <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
+              <FontAwesomeIcon icon={faRotate} />
+            </button>
+          </Link>
+        </div>
 
         <video
           className={`${styles.background} ${
@@ -140,9 +131,7 @@ const GamePage = () => {
         >
           <source src={third} type="video/mp4" />
         </video>
-        <button className={styles.BtnHome} onClick={() => navigate("/")}>
-          Go back to Homepage
-        </button>
+
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -175,11 +164,6 @@ const GamePage = () => {
           </div>
         </div>
 
-        <div>
-          <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
-            <FontAwesomeIcon icon={faRotate} />
-          </button>
-        </div>
       </div>
 
       <Outlet />
