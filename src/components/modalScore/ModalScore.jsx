@@ -10,7 +10,7 @@ const ModalScore = ({ score }) => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShowModal(true), 1800);
+    setTimeout(() => setShowModal(true), 180000);
   }, []);
 
   const handleButtonClick = () => {

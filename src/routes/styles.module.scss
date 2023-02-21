@@ -76,7 +76,7 @@
   .Question {
     border: 3px solid rgb(134, 158, 228);
     width: 80%;
-    max-height: 200px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,9 +87,7 @@
     background-color: rgba(71, 85, 95, 0.281);
     color: white;
     text-align: center;
-    h3 {
-      color: rgb(9, 83, 143);
-    }
+
     .userInfo {
       border: 2px solid orange;
       display: flex;
