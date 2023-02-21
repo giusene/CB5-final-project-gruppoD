@@ -14,6 +14,10 @@ import first from "./backgrounds/first.webm";
 import second from "./backgrounds/second.webm";
 import third from "./backgrounds/third.webm";
 
+import useSound from 'use-sound';
+import soundCorrect from './sounds/sound_correct.mp3';
+import soundIncorrect from './sounds/sound_incorrect.mp3';
+
 import ModalScore from "./../components/modalScore/ModalScore";
 
 const GamePage = () => {
@@ -28,6 +32,9 @@ const GamePage = () => {
 
   const [backgroundControl, setBackgroundControl] = useState(0);
   const [text, setText] = useState("First manche");
+
+  const [playCorrect] = useSound(soundCorrect);
+  const [playIncorrect] = useSound(soundIncorrect);
 
   useEffect(() => {
     Promise.all([GET("easy"), GET("medium"), GET("hard")]).then((res) => {
@@ -95,7 +102,11 @@ const GamePage = () => {
   const getAnswer = (answer) => {
     if (answer === questions[questionNumber].correct_answer) {
       setScore(score + 1);
-    }
+      playCorrect();
+    } else {
+      playIncorrect();
+    };
+
     setQuestionNumber(questionNumber + 1);
     console.log(score);
   };
@@ -104,12 +115,16 @@ const GamePage = () => {
     <>
       <div className={styles.GamePage}>
         <div className={styles.Buttons}>
-          <button className={styles.BtnHome} onClick={() => navigate("/")}>
+          <button 
+            className={styles.BtnHome} 
+            onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
           </button>
           <h1>{text}</h1>
           <Link to=".">
-            <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
+            <button 
+              className={styles.BtnRefresh} 
+              onClick={() => refreshPage()}>
               <FontAwesomeIcon icon={faRotate} />
             </button>
           </Link>
@@ -161,7 +176,7 @@ const GamePage = () => {
         <TimeBar />
 
         <div className={styles.AnswerContainer}>
-          <h4>Right Answer(s): {score}</h4>
+          <h4>Correct Answer(s): {score}</h4>
           <div className={styles.AnswerGrid}>
             {questions[questionNumber] &&
               questions[questionNumber].allQuestions.map((item, index) => (
