@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import github from "./github.png";
+import linkedin from "./linkedin.png";
 
 const Footer = () => {
   return (
@@ -7,19 +9,65 @@ const Footer = () => {
       <h1>Creators:</h1>
       <ul>
         <li>
-          <a href="https://github.com/AntonellaSchillaci">Antonella</a>
+          <a>Antonella</a>
+          <img src="./antonella.png" />
+          <div className={styles.buttons}>
+            <a href="https://github.com/AntonellaSchillaci">
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/antonella-schillaci-frontend-dev/">
+              <img src={linkedin} />
+            </a>
+          </div>
         </li>
         <li>
-          <a href="https://github.com/CarlottaKiri">Carlotta</a>
+          <a>Carlotta</a>
+          <img src="./carlotta.png" />
+          <div className={styles.buttons}>
+            <a href="https://github.com/CarlottaKiri">
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/carlottakiri/">
+              <img src={linkedin} />
+            </a>
+          </div>
         </li>
         <li>
-          <a href="https://github.com/DavinGarozzo">Davin</a>
+          <a>Davin</a>
+          <img src="./davin.png" />
+
+          <div className={styles.buttons}>
+            <a href="https://github.com/DavinGarozzo">
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/salvatore-davin-garozzo/">
+              <img src={linkedin} />
+            </a>
+          </div>
         </li>
         <li>
-          <a href="https://github.com/IFranc3sca">Francesca</a>
+          <a>Francesca</a>
+          <img src="./francesca.png" />
+          <div className={styles.buttons}>
+            <a href="https://github.com/IFranc3sca">
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/francesca-leonardi-919450266/">
+              <img src={linkedin} />
+            </a>
+          </div>
         </li>
         <li>
-          <a href="https://github.com/Martina-LP">Martina</a>
+          <a>Martina</a>
+          <img src="./martina.png" />
+          <div className={styles.buttons}>
+            <a href="https://github.com/Martina-LP">
+              <img src={github} />
+            </a>
+            <a href="https://www.linkedin.com/in/martinalaporta/">
+              <img src={linkedin} />
+            </a>
+          </div>
         </li>
       </ul>
     </div>

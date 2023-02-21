@@ -1,25 +1,32 @@
-.Modal{
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 123, 165, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  &.open {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .background {
+    min-width: 100%;
+    min-height: 400px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(78, 123, 165, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-
-    &.open {
-    animation: fadeIn 0.5s ease-in-out;
-    }
-
-    .modalContent {
+    z-index: -5;
+  }
+  .modalContent {
     position: relative;
     background-color: #fff;
     padding: 2rem;
     width: 80%;
     max-width: 600px;
-    border-radius: 10px; 
-    }
+    border-radius: 10px;
+  }
 }
