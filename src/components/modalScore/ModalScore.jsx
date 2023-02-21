@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
 
 import FireworksComponent from "../fireworks/Fireworks";
 import background from "./background.webm";
@@ -28,7 +30,9 @@ const ModalScore = ({ score }) => {
           <div className={styles.modalContent}>
             <h2>Time's Up!</h2>
             <p>Your score is: {score}</p>
-            <button onClick={handleButtonClick}>Go back to Homepage</button>
+            <button className={styles.BtnHome} onClick={handleButtonClick}>
+              <FontAwesomeIcon icon={faHouseChimneyUser} />
+            </button>
           </div>
         </div>
       )}
