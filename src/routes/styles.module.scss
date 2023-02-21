@@ -86,56 +86,82 @@
   .userInfo {
     border: 2px solid orange;
     display: flex;
-    margin-left: auto;
-    padding: 2px 4px;
-    border-radius: 4px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(71, 85, 95, 0.281);
+    color: white;
+    text-align: center;
+    h3 {
+      color: rgb(9, 83, 143);
+    }
+    .userInfo {
+      border: 2px solid orange;
+      display: flex;
+      margin-left: auto;
+      padding: 2px 4px;
+      border-radius: 4px;
+
 
     img {
       width: 40px;
       height: 60px;
     }
   }
-}
-.AnswerContainer {
-  max-height: 350px;
-  min-height: 300px;
-  text-align: center;
-  color: white;
-  .AnswerGrid {
-    display: grid;
-    grid-template-columns: 50%, 50%;
-    grid-auto-rows: minmax(auto);
-    grid-gap: 20px;
 
-    .Answer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      max-width: 100px;
-      min-width: 100px;
-      border-radius: 10px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      margin: 0;
-      background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .AnswerContainer {
+    max-height: 350px;
+    min-height: 300px;
+    text-align: center;
+    color: white;
+    h4 {
+      font-size: 20px;
+      margin-top: 0;
     }
-    .Answer:nth-child(1) {
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 1;
-    }
-    .Answer:nth-child(2) {
-      grid-column: 2 / span 1;
-      grid-row: 1 / span 1;
-    }
-    .Answer:nth-child(3) {
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
-    }
-    .Answer:nth-child(2) {
-      grid-column: 2 / span 1;
-      grid-row: 2 / span 1;
+    .AnswerGrid {
+      display: grid;
+      grid-template-columns: 50%, 50%;
+      grid-auto-rows: minmax(auto);
+      grid-gap: 20px;
+
+      .Answer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        max-width: 100px;
+        min-width: 100px;
+        border-radius: 10px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin: 0;
+        background-color: white;
+      }
+      .Answer:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+      .Answer:nth-child(1) {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+      }
+      .Answer:nth-child(2) {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+      }
+      .Answer:nth-child(3) {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+      }
+      .Answer:nth-child(2) {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+}
+
     }
   }
 }
