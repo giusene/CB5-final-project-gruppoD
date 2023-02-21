@@ -22,13 +22,12 @@ const GamePage = () => {
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
-const [easyQuestions, setEasyQuestions] = useState([]);
+  const [easyQuestions, setEasyQuestions] = useState([]);
   const [mediumQuestions, setMediumQuestions] = useState([]);
   const [hardQuestions, setHardQuestions] = useState([]);
 
   const [backgroundControl, setBackgroundControl] = useState(0);
   const [text, setText] = useState("First manche");
-
 
   useEffect(() => {
     Promise.all([GET("easy"), GET("medium"), GET("hard")]).then((res) => {
@@ -78,20 +77,16 @@ const [easyQuestions, setEasyQuestions] = useState([]);
       setHardQuestions(hardQuestions);
       setTimeout(() => {
         setQuestions(mediumQuestions);
-         setBackgroundControl(1);
-          setText("Second manche");
+        setBackgroundControl(1);
+        setText("Second manche");
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
-          setBackgroundControl(2);
-          setText("Third manche");
+        setBackgroundControl(2);
+        setText("Third manche");
       }, 120000);
     });
-
-
-       
-   
-
+  }, []);
 
   const refreshPage = () => {
     navigate(0);
