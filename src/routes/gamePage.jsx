@@ -22,12 +22,16 @@ const GamePage = () => {
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
+  const [easyQuestions, setEasyQuestions] = useState([]);
+  const [mediumQuestions, setMediumQuestions] = useState([]);
+  const [hardQuestions, setHardQuestions] = useState([]);
+
   const [backgroundControl, setBackgroundControl] = useState(0);
   const [text, setText] = useState("First manche");
 
   useEffect(() => {
-    GET("easy").then((res) => {
-      let newQuestions = res.results.map((item) => {
+    Promise.all([GET("easy"), GET("medium"), GET("hard")]).then((res) => {
+      let easyQuestions = res[0].results.map((item) => {
         const newItem = {
           ...item,
           allQuestions: sortArrayRandomly([
@@ -39,53 +43,51 @@ const GamePage = () => {
         };
         return newItem;
       });
-      setQuestions(newQuestions);
+      setQuestions(easyQuestions);
+      setEasyQuestions(easyQuestions);
+
+      let mediumQuestions = res[1].results.map((item) => {
+        const newItem = {
+          ...item,
+          allQuestions: sortArrayRandomly([
+            item.correct_answer,
+            item.incorrect_answers[0],
+            item.incorrect_answers[1],
+            item.incorrect_answers[2],
+          ]),
+        };
+        return newItem;
+      });
+
+      setMediumQuestions(mediumQuestions);
+      let hardQuestions = res[2].results.map((item) => {
+        const newItem = {
+          ...item,
+          allQuestions: sortArrayRandomly([
+            item.correct_answer,
+            item.incorrect_answers[0],
+            item.incorrect_answers[1],
+            item.incorrect_answers[2],
+          ]),
+        };
+
+        return newItem;
+      });
+
+      setHardQuestions(hardQuestions);
+      setTimeout(() => {
+        setQuestions(mediumQuestions);
+        setBackgroundControl(1);
+        setText("Second manche");
+      }, 60000);
+      setTimeout(() => {
+        setQuestions(hardQuestions);
+        setBackgroundControl(2);
+        setText("Third manche");
+      }, 120000);
     });
-    setTimeout(
-      () =>
-        GET("medium").then((res) => {
-          let newQuestions = res.results.map((item) => {
-            const newItem = {
-              ...item,
-              allQuestions: sortArrayRandomly([
-                item.correct_answer,
-                item.incorrect_answers[0],
-                item.incorrect_answers[1],
-                item.incorrect_answers[2],
-              ]),
-            };
-            return newItem;
-          });
-
-          setQuestions(newQuestions);
-          setBackgroundControl(1);
-          setText("Second manche");
-        }),
-      60000
-    );
-    setTimeout(
-      () =>
-        GET("hard").then((res) => {
-          let newQuestions = res.results.map((item) => {
-            const newItem = {
-              ...item,
-              allQuestions: sortArrayRandomly([
-                item.correct_answer,
-                item.incorrect_answers[0],
-                item.incorrect_answers[1],
-                item.incorrect_answers[2],
-              ]),
-            };
-            return newItem;
-          });
-
-          setQuestions(newQuestions);
-          setBackgroundControl(2);
-          setText("Third manche");
-        }),
-      120000
-    );
   }, []);
+
   const refreshPage = () => {
     navigate(0);
   };
