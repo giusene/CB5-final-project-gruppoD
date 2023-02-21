@@ -23,6 +23,7 @@ const GamePage = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
   const [backgroundControl, setBackgroundControl] = useState(0);
+  const [text, setText] = useState("First manche");
 
   useEffect(() => {
     GET("easy").then((res) => {
@@ -58,7 +59,7 @@ const GamePage = () => {
 
           setQuestions(newQuestions);
           setBackgroundControl(1);
-          console.log(backgroundControl);
+          setText("Second manche");
         }),
       60000
     );
@@ -80,6 +81,7 @@ const GamePage = () => {
 
           setQuestions(newQuestions);
           setBackgroundControl(2);
+          setText("Third manche");
         }),
       120000
     );
@@ -98,19 +100,28 @@ const GamePage = () => {
 
   return (
     <>
-
       <div className={styles.GamePage}>
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
           </button>
+          <h1>{text}</h1>
           <Link to=".">
             <button className={styles.BtnRefresh} onClick={() => refreshPage()}>
               <FontAwesomeIcon icon={faRotate} />
             </button>
           </Link>
         </div>
-
+        <video
+          className={`${styles.background} ${
+            backgroundControl !== 0 && styles.noBackground
+          }`}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={first} type="video/mp4" />
+        </video>
         <video
           className={`${styles.background} ${
             backgroundControl !== 1 && styles.noBackground
@@ -131,7 +142,6 @@ const GamePage = () => {
         >
           <source src={third} type="video/mp4" />
         </video>
-
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -163,7 +173,6 @@ const GamePage = () => {
               ))}
           </div>
         </div>
-
       </div>
 
       <Outlet />
