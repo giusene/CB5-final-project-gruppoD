@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import background from "./img/background.webm";
+import background from "./img/background.mp4";
 import avatar1 from "./img/avatar1.png";
 import avatar2 from "./img/avatar2.png";
 import { Outlet } from "react-router-dom";
@@ -40,59 +40,63 @@ export default function HomeLayout({ children }) {
         <video className={styles.background} autoPlay loop muted>
           <source src={background} type="video/mp4" />
         </video>
-        {/* <div className={styles.images}>
-      <img className={styles.avatar1} src={avatar1} alt="avatar" />
-      <img className={styles.avatar2} src={avatar2} alt="avatar" />
+        <div className={styles.images}>
+          <div className={styles.avatar1}>
+            <img className={styles.avatar1} src={avatar1} alt="avatar" />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 79,
+                left: 59,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 93,
+                left: 84,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+          </div>
 
-      <div className={styles.eyes}>
-        <img
-          ref={eyeLeft}
-          style={{
-            top: 259,
-            left: 60,
-            transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-          }}
-          src={eye}
-          className={styles.eye}
-        />
-        <img
-          ref={eyeLeft}
-          style={{
-            top: 273,
-            left: 83,
-            transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-          }}
-          src={eye}
-          className={styles.eye}
-        />
-        <img
-          ref={eyeLeft}
-          style={{
-            top: 121,
-            left: 333,
-            width: 14,
-            transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-          }}
-          src={eye}
-          className={styles.eye}
-        />
-        <img
-          ref={eyeLeft}
-          style={{
-            top: 108,
-            left: 370,
-            width: 14,
-            transform: `rotate(${calcAngle(eyeLeft)}deg)`,
-          }}
-          src={eye}
-          className={styles.eye}
-        />
+          <div className={styles.avatar2}>
+            <img className={styles.avatar2} src={avatar2} alt="avatar" />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 91,
+                left: 59,
+                width: 14,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+            <img
+              ref={eyeLeft}
+              style={{
+                top: 77,
+                left: 94,
+                width: 14,
+                transform: `rotate(${calcAngle(eyeLeft)}deg)`,
+              }}
+              src={eye}
+              className={styles.eye}
+            />
+          </div>
+        </div>
+        <div className={styles.Children}>{children}</div>
       </div>
-    </div>
-    <img /> */}
-        {children}
-      </div>
+
+
       <Outlet />
+
     </>
   );
 }
