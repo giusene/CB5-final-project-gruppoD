@@ -28,7 +28,7 @@ const GamePage = () => {
 
   const [backgroundControl, setBackgroundControl] = useState(0);
   const [color, setColor] = useState(
-    "linear-gradient(#21acff, #a3d8ff, #21acff)"
+    "linear-gradient(to bottom, #2d92ff, #3fa8ff, #5ebcff, #82cfff, #a8e1ff)"
   );
   const [text, setText] = useState("First manche");
 
@@ -82,13 +82,17 @@ const GamePage = () => {
         setQuestions(mediumQuestions);
         setBackgroundControl(1);
         setText("Second manche");
-        setColor("linear-gradient(#ff8201, #ffdca2, #ff8201)");
+        setColor(
+          "linear-gradient(to bottom, #ffaf34, #ff9b2d, #ff862b, #ff6f2d, #ff5633)"
+        );
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
         setBackgroundControl(2);
         setText("Third manche");
-        setColor("linear-gradient(#de1b00, #251612, #de1b00)");
+        setColor(
+          "linear-gradient(to bottom, #dc0000, #b60b04, #920f06, #6f1004, #4e0e00)"
+        );
       }, 120000);
     });
   }, []);
