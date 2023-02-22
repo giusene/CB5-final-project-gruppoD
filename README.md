@@ -44,9 +44,9 @@ to create a personal profile and then proceed to <strong>Login</strong>.
 _______________________________________________________________________________________________________________________________________
 
 <p align="center" width="100%">
-<img width="33%" src="https://thumbs2.imgbox.com/fa/68/GKsKKy01_t.png">
-<img width="33%" src="https://thumbs2.imgbox.com/41/71/3YyJD9RP_t.png">
-<img width="33%" src="https://thumbs2.imgbox.com/6d/8c/3YSIS6jb_t.png">
+<img width="32%" src="https://thumbs2.imgbox.com/fa/68/GKsKKy01_t.png">
+<img width="32%" src="https://thumbs2.imgbox.com/41/71/3YyJD9RP_t.png">
+<img width="32%" src="https://thumbs2.imgbox.com/6d/8c/3YSIS6jb_t.png">
 </p>
 
 <p align="left">
