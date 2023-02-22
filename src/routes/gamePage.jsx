@@ -27,7 +27,9 @@ const GamePage = () => {
   const [hardQuestions, setHardQuestions] = useState([]);
 
   const [backgroundControl, setBackgroundControl] = useState(0);
-  const [color, setColor] = useState("#4ed3ff");
+  const [color, setColor] = useState(
+    "linear-gradient(#21acff, #a3d8ff, #21acff)"
+  );
   const [text, setText] = useState("First manche");
 
   useEffect(() => {
@@ -80,13 +82,13 @@ const GamePage = () => {
         setQuestions(mediumQuestions);
         setBackgroundControl(1);
         setText("Second manche");
-        setColor("#f0821b");
+        setColor("linear-gradient(#ff8201, #ffdca2, #ff8201)");
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
         setBackgroundControl(2);
         setText("Third manche");
-        setColor("#db0606");
+        setColor("linear-gradient(#de1b00, #251612, #de1b00)");
       }, 120000);
     });
   }, []);
@@ -105,7 +107,7 @@ const GamePage = () => {
 
   return (
     <>
-      <div className={styles.GamePage} style={{ backgroundColor: color }}>
+      <div className={styles.GamePage} style={{ background: color }}>
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
