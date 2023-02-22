@@ -18,7 +18,7 @@
 <p align="center">
 As a team, we decided to develop something that might be technically interesting and a bit challenging, <br>
 so we clearly chose to work on something we've never done before: a <strong>quiz game</strong>. <br> 
-This project was created coding mainly in <strong>React</strong> and <strong>SASS</strong>, <br>
+This project was created coding mainly in <strong>React + Vite</strong> and <strong>SASS</strong>, <br>
 we also used <strong>Firebase</strong> to store user scores and <strong>Vercel</strong> to deploy it. <br>
 Some of the graphic elements were designed using <strong>Canva</strong> and <strong>Spline</strong>. <br>
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
