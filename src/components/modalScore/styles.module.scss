@@ -14,8 +14,6 @@
     animation: fadeIn 0.5s ease-in-out;
   }
 
-
-
   .background {
     min-width: 100%;
     min-height: 400px;
@@ -26,12 +24,29 @@
   }
 
   .modalContent {
+    font-family: "Fortnite";
     position: relative;
     background-color: #fff;
     padding: 2rem;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
+  
+    .Title {
+      text-align: center;
+      font-size: 50px;
+      font-weight: bolder;
+    }
+    .Content {
+      text-align: center;
+      font-size: 34px;
+      font-weight: bolder;
+    }
+    .Score {
+      font-size: 38px;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
   }
 
   .BtnHome {

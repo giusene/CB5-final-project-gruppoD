@@ -28,8 +28,8 @@ const ModalScore = ({ score }) => {
           </video>
           <FireworksComponent />
           <div className={styles.modalContent}>
-            <h2>Time's Up!</h2>
-            <p>Your score is: {score}</p>
+            <h2 className={styles.Title}>Time's Up!</h2>
+            <h3 className={styles.Content}>Your score is: <span className={styles.Score}>{score}</span></h3>
             <button className={styles.BtnHome} onClick={handleButtonClick}>
               <FontAwesomeIcon icon={faHouseChimneyUser} />
             </button>
