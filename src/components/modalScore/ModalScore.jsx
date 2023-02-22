@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
 
 import FireworksComponent from "../fireworks/Fireworks";
-import background from "./background.webm";
+import background from "./background.gif";
 
 const ModalScore = ({ score }) => {
   const navigate = useNavigate();
@@ -23,13 +23,13 @@ const ModalScore = ({ score }) => {
     <>
       {showModal && (
         <div className={styles.Modal}>
-          <video className={styles.background} autoPlay loop muted>
-            <source src={background} type="video/mp4" />
-          </video>
+          <img src={background} className={styles.background} />
           <FireworksComponent />
           <div className={styles.modalContent}>
             <h2 className={styles.Title}>Time's Up!</h2>
-            <h3 className={styles.Content}>Your score is: <span className={styles.Score}>{score}</span></h3>
+            <h3 className={styles.Content}>
+              Your score is: <span className={styles.Score}>{score}</span>
+            </h3>
             <button className={styles.BtnHome} onClick={handleButtonClick}>
               <FontAwesomeIcon icon={faHouseChimneyUser} />
             </button>

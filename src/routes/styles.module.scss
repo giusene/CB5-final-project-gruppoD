@@ -14,7 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    gap: 10px;
+    width: 90%;
     padding-top: 20px;
     margin-bottom: 10px;
     h1 {
@@ -30,8 +31,8 @@
   justify-content: space-around;
 
   .BtnHome {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 8px;
     border: none;
     background-color: rgb(134, 158, 228);
@@ -46,8 +47,8 @@
   }
 
   .BtnRefresh {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 40px;
     border-radius: 100%;
     border: none;
     background-color: rgb(134, 158, 228);
