@@ -14,9 +14,9 @@ import first from "./backgrounds/Above-Clouds.gif";
 import second from "./backgrounds/second.gif";
 import third from "./backgrounds/third.gif";
 
-import useSound from 'use-sound';
-import soundCorrect from './sounds/sound_correct.mp3';
-import soundIncorrect from './sounds/sound_incorrect.mp3';
+import useSound from "use-sound";
+import soundCorrect from "./sounds/sound_correct.mp3";
+import soundIncorrect from "./sounds/sound_incorrect.mp3";
 
 import ModalScore from "./../components/modalScore/ModalScore";
 
@@ -26,6 +26,7 @@ const GamePage = () => {
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
+  const [hasAnswered, setHasAnswered] = useState(false); // stato per evitare che vengano assegnati più punti dalla stessa domanda
   const [easyQuestions, setEasyQuestions] = useState([]);
   const [mediumQuestions, setMediumQuestions] = useState([]);
   const [hardQuestions, setHardQuestions] = useState([]);
@@ -110,23 +111,24 @@ const GamePage = () => {
   };
 
   const getAnswer = (answer) => {
-    if (answer === questions[questionNumber].correct_answer) {
-      setScore(score + 1);
+    if (!hasAnswered) {
+      if (answer === questions[questionNumber].correct_answer) {
+        setScore(score + 1);
+        setHasAnswered(true);
+        setAnswerColor("green");
+        playCorrect();
+      } else {
+        setAnswerColor("red");
+        playIncorrect();
+      }
+      setTimeout(() => {
+        setQuestionNumber(questionNumber + 1);
+        setHasAnswered(false);
+        setAnswerColor("white");
+      }, 1000);
 
-      setAnswerColor("green");
-      playCorrect();
-    
-    } else {
-      setAnswerColor("red");
-       playIncorrect();
+      console.log(score);
     }
-    setTimeout(() => {
-      setQuestionNumber(questionNumber + 1);
-      setAnswerColor("white");
-    }, 1000);
-
-
-    console.log(score);
   };
 
   return (
@@ -187,7 +189,7 @@ const GamePage = () => {
                   style={{
                     backgroundColor: answerColor,
                   }}
-                  onMouseUp={() => getAnswer(textReplacer(item))}
+                  onClick={() => getAnswer(textReplacer(item))}
                   key={index}
                 >
                   {textReplacer(item)}
