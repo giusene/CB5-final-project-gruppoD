@@ -10,9 +10,9 @@ import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
-import first from "./backgrounds/first.webm";
-import second from "./backgrounds/second.webm";
-import third from "./backgrounds/third.webm";
+import first from "./backgrounds/Above-Clouds.gif";
+import second from "./backgrounds/second.gif";
+import third from "./backgrounds/third.gif";
 
 import ModalScore from "./../components/modalScore/ModalScore";
 
@@ -120,7 +120,25 @@ const GamePage = () => {
 
   return (
     <>
-      <div className={styles.GamePage} style={{ background: color }}>
+      <div className={styles.GamePage}>
+        <img
+          src={first}
+          className={`${styles.background} ${
+            backgroundControl !== 0 && styles.noBackground
+          }`}
+        />
+        <img
+          src={second}
+          className={`${styles.background} ${
+            backgroundControl !== 1 && styles.noBackground
+          }`}
+        />
+        <img
+          src={third}
+          className={`${styles.background} ${
+            backgroundControl !== 2 && styles.noBackground
+          }`}
+        />
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />

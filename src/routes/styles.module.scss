@@ -153,21 +153,22 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
+  .background {
+    min-width: 100%;
+    min-height: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    background-image: contain;
+    animation: fadeIn 3s;
+    background-color: black;
+    filter: blur(2px);
+  }
 }
 
 .noBackground {
   display: none;
-}
-.background {
-  min-width: 100%;
-  min-height: 400px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -5;
-  background-image: contain;
-  animation: fadeIn 3s;
-  background-color: black;
 }
 
 @keyframes fadeIn {
