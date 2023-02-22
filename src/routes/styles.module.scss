@@ -1,8 +1,11 @@
 .GamePage {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-top: 20px;
+
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -12,10 +15,11 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 10px;
     h1 {
       text-align: center;
-      color: rgb(238, 238, 238);
+      color: rgb(255, 255, 255);
     }
     .Manche {
       font-family: "Fortnite";
@@ -23,15 +27,7 @@
     }
   }
 
-  .background {
-    min-width: 100%;
-    min-height: 400px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -5;
-    background-image: contain;
-  }
+
 
   justify-content: space-around;
 
@@ -66,14 +62,6 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
-}
-
-.GamePage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
 
   .Question {
     font-size: 100%;
@@ -175,20 +163,22 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
+  .background {
+    min-width: 100%;
+    min-height: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    background-image: contain;
+    animation: fadeIn 3s;
+    background-color: black;
+    filter: blur(2px);
+  }
 }
+
 .noBackground {
   display: none;
-}
-.background {
-  min-width: 100%;
-  min-height: 400px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -5;
-  background-image: contain;
-  animation: fadeIn 3s;
-  background-color: black;
 }
 
 @keyframes fadeIn {

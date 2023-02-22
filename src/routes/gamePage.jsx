@@ -10,9 +10,9 @@ import { useState, useEffect } from "react";
 import { textReplacer } from "../utils/textReplacer";
 import TimeBar from "../components/timeBar/TimeBar";
 import sortArrayRandomly from "../utils/sortArrayRandomly";
-import first from "./backgrounds/first.webm";
-import second from "./backgrounds/second.webm";
-import third from "./backgrounds/third.webm";
+import first from "./backgrounds/Above-Clouds.gif";
+import second from "./backgrounds/second.gif";
+import third from "./backgrounds/third.gif";
 
 import useSound from 'use-sound';
 import soundCorrect from './sounds/sound_correct.mp3';
@@ -31,6 +31,10 @@ const GamePage = () => {
   const [hardQuestions, setHardQuestions] = useState([]);
 
   const [backgroundControl, setBackgroundControl] = useState(0);
+  const [color, setColor] = useState(
+    "linear-gradient(to bottom, #2d92ff, #3fa8ff, #5ebcff, #82cfff, #a8e1ff)"
+  );
+  const [answerColor, setAnswerColor] = useState("white");
   const [text, setText] = useState("First manche");
 
   const [playCorrect] = useSound(soundCorrect);
@@ -86,11 +90,17 @@ const GamePage = () => {
         setQuestions(mediumQuestions);
         setBackgroundControl(1);
         setText("Second manche");
+        setColor(
+          "linear-gradient(to bottom, #ffaf34, #ff9b2d, #ff862b, #ff6f2d, #ff5633)"
+        );
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
         setBackgroundControl(2);
         setText("Third manche");
+        setColor(
+          "linear-gradient(to bottom, #dc0000, #b60b04, #920f06, #6f1004, #4e0e00)"
+        );
       }, 120000);
     });
   }, []);
@@ -102,18 +112,44 @@ const GamePage = () => {
   const getAnswer = (answer) => {
     if (answer === questions[questionNumber].correct_answer) {
       setScore(score + 1);
-      playCorrect();
-    } else {
-      playIncorrect();
-    };
 
-    setQuestionNumber(questionNumber + 1);
+      setAnswerColor("green");
+      playCorrect();
+    
+    } else {
+      setAnswerColor("red");
+       playIncorrect();
+    }
+    setTimeout(() => {
+      setQuestionNumber(questionNumber + 1);
+      setAnswerColor("white");
+    }, 1000);
+
+
     console.log(score);
   };
 
   return (
     <>
       <div className={styles.GamePage}>
+        <img
+          src={first}
+          className={`${styles.background} ${
+            backgroundControl !== 0 && styles.noBackground
+          }`}
+        />
+        <img
+          src={second}
+          className={`${styles.background} ${
+            backgroundControl !== 1 && styles.noBackground
+          }`}
+        />
+        <img
+          src={third}
+          className={`${styles.background} ${
+            backgroundControl !== 2 && styles.noBackground
+          }`}
+        />
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
@@ -125,36 +161,6 @@ const GamePage = () => {
             </button>
           </Link>
         </div>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 0 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={first} type="video/mp4" />
-        </video>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 1 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={second} type="video/mp4" />
-        </video>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 2 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={third} type="video/mp4" />
-        </video>
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -178,7 +184,10 @@ const GamePage = () => {
               questions[questionNumber].allQuestions.map((item, index) => (
                 <h5
                   className={styles.Answer}
-                  onClick={() => getAnswer(textReplacer(item))}
+                  style={{
+                    backgroundColor: answerColor,
+                  }}
+                  onMouseUp={() => getAnswer(textReplacer(item))}
                   key={index}
                 >
                   {textReplacer(item)}
