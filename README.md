@@ -1,11 +1,11 @@
 # Final Project for Edgemony's Coding Bootcamp, developed by 
 
 <p align="center"> |
-  <a href="https://github.com/AntonellaSchillaci"><img width="4%" height="4%" src="https://thumbs2.imgbox.com/af/59/oo0azaeC_t.png" alt="Antonella"> <strong>Antonella Schillaci</strong></a> |
-  <a href="https://github.com/CarlottaKiri"><img width="4%" height="4%" src="https://thumbs2.imgbox.com/81/dc/ix8bfcz1_t.png" alt="Carlotta"> <strong>Carlotta Patané</strong></a> | <br>
-  <a href="https://github.com/DavinGarozzo"><img width="4%" height="4%" src="https://thumbs2.imgbox.com/88/4f/KMsj3tof_t.png" alt="Davin"> <strong>Davin Garozzo</strong></a> |
-  <a href="https://github.com/IFranc3sca"><img width="4%" height="4%" src="https://thumbs2.imgbox.com/70/b1/iWCSZyD7_t.png" alt="Francesca"> <strong>Francesca Leonardi</strong></a> |
-  <a href="https://github.com/Martina-LP"><img width="4%" height="4%" src="https://thumbs2.imgbox.com/c1/de/vhfQoM8V_t.png" alt="Martina"> <strong>Martina La Porta</strong></a> | 
+  <a href="https://github.com/AntonellaSchillaci"><img width="6%" height="6%" src="./public/antonella.png" alt="Antonella"> <strong>Antonella Schillaci</strong></a> |
+  <a href="https://github.com/CarlottaKiri"><img width="6%" height="6%" src="./public/carlotta.png" alt="Carlotta"> <strong>Carlotta Patané</strong></a> | <br>
+  <a href="https://github.com/DavinGarozzo"><img width="6%" height="6%" src="./public/davin.png" alt="Davin"> <strong>Davin Garozzo</strong></a> |
+  <a href="https://github.com/IFranc3sca"><img width="6%" height="6%" src="./public/francesca.png" alt="Francesca"> <strong>Francesca Leonardi</strong></a> |
+  <a href="https://github.com/Martina-LP"><img width="6%" height="6%" src="./public/martina.png" alt="Martina"> <strong>Martina La Porta</strong></a> | 
 </p>
 
 <p align="center" width="100%">
