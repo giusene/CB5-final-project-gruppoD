@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import SelectOptions from "../select/Select";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -6,21 +6,33 @@ import { ApplicationCtx } from "../../store";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
+  const [avatar, setAvatar] = useState(1);
   const { dispatch } = useContext(ApplicationCtx);
   const navigate = useNavigate();
 
   const onHandleSubmit = async (e) => {
-    console.log("io");
     e.preventDefault();
-    await dispatch({ type: "SET_USERNAME", payload: username });
+    console.log(avatar);
+    await dispatch({
+      type: "SET_USERNAME",
+      payload: { username: username, avatar: avatar },
+    });
     navigate("/gamePage");
   };
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("user");
+    if (storedUsername) {
+      const { username, avatar } = JSON.parse(storedUsername);
+      setUsername(username);
+    }
+  }, []);
 
   return (
     <div className={styles.Login}>
       <form onSubmit={onHandleSubmit}>
         <h2>Choose your Avatar</h2>
-        <SelectOptions />
+        <SelectOptions setAvatar={setAvatar} />
 
         <h2>Choose your NickName</h2>
         <input

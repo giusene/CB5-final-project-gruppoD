@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ApplicationCtx } from "../../store";
 
 const options = [
@@ -35,9 +35,9 @@ const options = [
   },
 ];
 
-export default function Select() {
+export default function Select({ setAvatar }) {
   const { dispatch } = useContext(ApplicationCtx);
-  const [avatarId, setAvatar] = useState("");
+  /*const [avatarId, setAvatar] = useState("");*/
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -48,8 +48,18 @@ export default function Select() {
   const handleSelectOption = async (option) => {
     setSelectedOption(option);
     setIsOpen(false);
-    await dispatch({ type: "SET_AVATAR", payload: option.id });
+    setAvatar(option.id);
+    /*await dispatch({ type: "SET_AVATAR", payload: option.id });*/
   };
+
+  useEffect(() => {
+    const getLocalStorage = localStorage.getItem("user");
+    if (getLocalStorage) {
+      const { avatar } = JSON.parse(getLocalStorage);
+      const getAvatar = options.filter((item) => item.id === avatar);
+      setSelectedOption(getAvatar[0]);
+    }
+  }, []);
 
   return (
     <div className={styles.Select}>
@@ -67,8 +77,8 @@ export default function Select() {
         <div className={styles.Options}>
           {options.map((option) => (
             <div
-              value={avatarId}
-              onChange={(option) => setAvatar(() => option.target.value)}
+              value={option.id}
+              // onChange={(option) => setAvatar(option.target.value)}
               key={option.id}
               onClick={() => handleSelectOption(option)}
               className={styles.Option}

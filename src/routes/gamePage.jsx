@@ -43,11 +43,7 @@ const GamePage = () => {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    const storedUsername = localStorage.getItem("username");
-    setUsername(storedUsername);
-  }, []);
-
-  useEffect(() => {
+    console.log(state);
     Promise.all([GET("easy"), GET("medium"), GET("hard")]).then((res) => {
       let easyQuestions = res[0].results.map((item) => {
         const newItem = {

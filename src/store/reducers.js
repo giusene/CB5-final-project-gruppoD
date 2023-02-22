@@ -3,12 +3,11 @@ import { actions } from "./actions";
 const globalReducer = (state, action) => {
   switch (action.type) {
     case actions.SET_USERNAME:
-      localStorage.setItem("user", action.payload);
+      localStorage.setItem("user", JSON.stringify(action.payload));
       return {
-        ...state,
         user: {
-          ...state.user,
-          username: action.payload,
+          username: action.payload.username,
+          avatar: action.payload.avatar,
         },
       };
     case actions.REMOVE_USERNAME:
