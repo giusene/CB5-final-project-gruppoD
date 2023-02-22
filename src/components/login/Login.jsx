@@ -16,14 +16,14 @@ const Login = (options) => {
         <h2>Choose your Avatar</h2>
         <SelectOptions />
 
-        <h2>Choose your NickName</h2>
+        <h2>Choose your Nickname</h2>
         <input
           value={username}
           onChange={(e) => setUsername(() => e.target.value)}
           type="text"
           id="username"
           name="username"
-          placeholder="Enter your NickName..."
+          placeholder="Type your Nickname..."
         />
         <Link to={"/gamePage"}>
           <input className={styles.BtnLogin} type="submit" value="Login" />
