@@ -4,7 +4,6 @@
   flex-direction: column;
 
   align-items: flex-start;
-  padding-top: 20px;
 
   height: 100vh;
   width: 100%;
@@ -15,6 +14,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
+    padding-top: 20px;
     margin-bottom: 20px;
     h1 {
       text-align: center;
@@ -72,7 +72,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 
   .Question {
     border: 3px solid rgb(134, 158, 228);

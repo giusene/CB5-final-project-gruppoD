@@ -27,6 +27,7 @@ const GamePage = () => {
   const [hardQuestions, setHardQuestions] = useState([]);
 
   const [backgroundControl, setBackgroundControl] = useState(0);
+  const [color, setColor] = useState("#4ed3ff");
   const [text, setText] = useState("First manche");
 
   useEffect(() => {
@@ -79,11 +80,13 @@ const GamePage = () => {
         setQuestions(mediumQuestions);
         setBackgroundControl(1);
         setText("Second manche");
+        setColor("#f0821b");
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
         setBackgroundControl(2);
         setText("Third manche");
+        setColor("#db0606");
       }, 120000);
     });
   }, []);
@@ -102,7 +105,7 @@ const GamePage = () => {
 
   return (
     <>
-      <div className={styles.GamePage}>
+      <div className={styles.GamePage} style={{ backgroundColor: color }}>
         <div className={styles.Buttons}>
           <button className={styles.BtnHome} onClick={() => navigate("/")}>
             <FontAwesomeIcon icon={faHouseChimneyUser} />
@@ -114,7 +117,7 @@ const GamePage = () => {
             </button>
           </Link>
         </div>
-        <video
+        {/* <video
           className={`${styles.background} ${
             backgroundControl !== 0 && styles.noBackground
           }`}
@@ -143,7 +146,7 @@ const GamePage = () => {
           muted
         >
           <source src={third} type="video/mp4" />
-        </video>
+        </video> */}
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
