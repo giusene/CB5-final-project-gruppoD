@@ -20,6 +20,15 @@ const globalReducer = (state, action) => {
           username: "",
         },
       };
+    case actions.SET_AVATAR:
+      localStorage.setItem("avatar", action.payload);
+      return {
+        ...state,
+        avatar: {
+          ...state.avatar,
+          avatarId: action.payload,
+        },
+      };
     default:
       return state;
   }

@@ -1,13 +1,18 @@
 import { createContext } from "react";
 
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || [],
-  initialUser: JSON.parse(localStorage.getItem("user")) || [],
   user: {
-    username: localStorage.getItem("user"),
+    username: localStorage.getItem("user") || "",
   },
-  currentEditNote: null,
-  isModalOpen: false,
+  avatar: {
+    avatarId: JSON.parse(localStorage.getItem("avatar")) || "",
+  },
+  initialUser: {
+    username: localStorage.getItem("user") || "",
+  },
+  initialAvatar: {
+    avatarId: JSON.parse(localStorage.getItem("avatar")) || "",
+  },
 };
 
 const ApplicationCtx = createContext(initialState);

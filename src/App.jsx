@@ -44,14 +44,9 @@ function App() {
 
         <HomeLayout>
           <ApplicationCtx.Provider value={{ state, dispatch }}>
-            {!state.user.username && !localStorage.getItem("user") ? (
-              <Login />
-            ) : (
-              <>
-                <Hero />
-                <Footer />
-              </>
-            )}
+            <Hero />
+            <Login />
+            <Footer />
           </ApplicationCtx.Provider>
         </HomeLayout>
         <Outlet />

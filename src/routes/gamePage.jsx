@@ -14,11 +14,13 @@ import first from "./backgrounds/first.webm";
 import second from "./backgrounds/second.webm";
 import third from "./backgrounds/third.webm";
 
-import useSound from 'use-sound';
-import soundCorrect from './sounds/sound_correct.mp3';
-import soundIncorrect from './sounds/sound_incorrect.mp3';
+import useSound from "use-sound";
+import soundCorrect from "./sounds/sound_correct.mp3";
+import soundIncorrect from "./sounds/sound_incorrect.mp3";
 
 import ModalScore from "./../components/modalScore/ModalScore";
+import { ApplicationCtx } from "../store";
+import { useContext } from "react";
 
 const GamePage = () => {
   const navigate = useNavigate();
@@ -35,6 +37,15 @@ const GamePage = () => {
 
   const [playCorrect] = useSound(soundCorrect);
   const [playIncorrect] = useSound(soundIncorrect);
+
+  const { state, dispatch } = useContext(ApplicationCtx);
+
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    setUsername(storedUsername);
+  }, []);
 
   useEffect(() => {
     Promise.all([GET("easy"), GET("medium"), GET("hard")]).then((res) => {
@@ -105,7 +116,7 @@ const GamePage = () => {
       playCorrect();
     } else {
       playIncorrect();
-    };
+    }
 
     setQuestionNumber(questionNumber + 1);
     console.log(score);
@@ -158,8 +169,8 @@ const GamePage = () => {
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
-            <h4>Username</h4>
-            <img src="https://picsum.photos/50/50" alt="Avatar" />
+            <h4> {username}</h4>
+            {/* <img src="https://picsum.photos/50/50" alt="Avatar" /> */}
           </div>
           {/* {questions.map((item, index) => (
             <p key={index}>{textReplacer(item.question)}</p>

@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SelectOptions from "../select/Select";
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ApplicationCtx } from "../../store";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
-  const onHandleSubmit = (e) => {
+  const { dispatch } = useContext(ApplicationCtx);
+  const navigate = useNavigate();
+
+  const onHandleSubmit = async (e) => {
+    console.log("io");
     e.preventDefault();
-    dispatch({ type: "SET_USERNAME", payload: username });
+    await dispatch({ type: "SET_USERNAME", payload: username });
+    navigate("/gamePage");
   };
 
   return (
@@ -25,9 +31,7 @@ const Login = (options) => {
           name="username"
           placeholder="Enter your NickName..."
         />
-        <Link to={"/gamePage"}>
-          <input className={styles.BtnLogin} type="submit" value="Login" />
-        </Link>
+        <input className={styles.BtnLogin} type="submit" value="Login" />
       </form>
 
       <p></p>

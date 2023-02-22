@@ -1,28 +1,34 @@
-import { useState } from "react";
 import styles from "./styles.module.scss";
+import { useContext, useState } from "react";
+import { ApplicationCtx } from "../../store";
 
 const options = [
   {
+    id: 1,
     value: "antonella",
     title: "Captain Anto",
     image: "./antonella.png",
   },
   {
+    id: 2,
     value: "carlotta",
     title: "Iron Carly",
     image: "./carlotta.png",
   },
   {
+    id: 3,
     value: "francesca",
     title: "Fantastic Fra",
     image: "./francesca.png",
   },
   {
+    id: 4,
     value: "martina",
     title: "Wonder Marty",
     image: "./martina.png",
   },
   {
+    id: 5,
     value: "davin",
     title: "Hulk Davy",
     image: "./davin.png",
@@ -30,6 +36,8 @@ const options = [
 ];
 
 export default function Select() {
+  const { dispatch } = useContext(ApplicationCtx);
+  const [avatarId, setAvatar] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -37,9 +45,10 @@ export default function Select() {
     setIsOpen(!isOpen);
   };
 
-  const handleSelectOption = (option) => {
+  const handleSelectOption = async (option) => {
     setSelectedOption(option);
     setIsOpen(false);
+    await dispatch({ type: "SET_AVATAR", payload: option.id });
   };
 
   return (
@@ -58,7 +67,9 @@ export default function Select() {
         <div className={styles.Options}>
           {options.map((option) => (
             <div
-              key={option.value}
+              value={avatarId}
+              onChange={(option) => setAvatar(() => option.target.value)}
+              key={option.id}
               onClick={() => handleSelectOption(option)}
               className={styles.Option}
             >
