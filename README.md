@@ -22,7 +22,8 @@ This project was created coding mainly in <strong>React</strong> and <strong>SAS
 we also used <strong>Firebase</strong> to store user scores and <strong>Vercel</strong> to deploy it. <br>
 Some of the graphic elements were designed using <strong>Canva</strong> and <strong>Spline</strong>. <br>
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
-Moreover, we tried to take into account what a user can expect from a single-player game to offer a better <strong>user experience</strong>.
+Moreover, we tried to take into account what a user can expect from a single-player game <br>
+to offer a better <strong>user experience</strong>.
 </p>
 
 ## Deep dive:
@@ -56,7 +57,8 @@ The quiz consists of <strong>three difficulty levels</strong>, which correspond 
 Each correct question will earn the player 1 point, while each incorrect question will earn no points. <br>
 Each round has a maximum duration of <strong>60 seconds</strong>, <br>
 which is indicated by a bar that marks the passage of time and changes color when time is running out, <br>
-so the user has to be careful and very quick to read both the question and the answers and try to select the exact answer. <br>
+so the user has to be careful and very quick to read both the question and the answers <br>
+and try to select the exact answer. <br>
 Each time a correct answer is given, it will be possible to see the <strong>count of points</strong> earned right on the screen. <br>
 Within this page there are, at the top, also two options to return to the Homepage or refresh the current game page.
 </p>
