@@ -1,16 +1,18 @@
 .GamePage {
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
 
   .Buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 80%;
     padding-top: 20px;
@@ -19,7 +21,13 @@
       text-align: center;
       color: rgb(255, 255, 255);
     }
+    .Manche {
+      font-family: "Fortnite";
+      text-transform: uppercase;
+    }
   }
+
+
 
   justify-content: space-around;
 
@@ -56,6 +64,7 @@
   }
 
   .Question {
+    font-size: 100%;
     border: 3px solid rgb(134, 158, 228);
     width: 80%;
 
@@ -89,7 +98,7 @@
     text-align: center;
     color: white;
     h4 {
-      font-size: 20px;
+      font-size: 25px;
       margin-top: 0;
     }
     .AnswerGrid {
@@ -99,6 +108,7 @@
       grid-gap: 20px;
 
       .Answer {
+        font-size: 100%;
         display: flex;
         align-items: center;
         justify-content: center;

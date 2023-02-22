@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
-
+@font-face {
+  font-family: "Fortnite";
+  src: url("./../fortnite.otf") format("opentype");
+}
+@font-face {
+  font-family: "Geosan";
+  src: url("./../GeosansLight.ttf") format("truetype");
+}
 body {
   margin: 0;
-  font-family: "Play", sans-serif;
+  font-family: "Geosan";
 }
-

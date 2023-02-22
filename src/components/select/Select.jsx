@@ -51,7 +51,7 @@ export default function Select() {
             <img src={selectedOption.image} alt={selectedOption.title} />
           </>
         ) : (
-          "Select..."
+          "Select your Avatar. . ."
         )}
       </div>
       {isOpen && (

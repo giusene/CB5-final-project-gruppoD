@@ -9,7 +9,11 @@ export const textReplacer = (text) => {
     .replace(/&shy;/g, "-")
     .replace(/&Uuml;/g, "Ü")
     .replace(/&amp;/g, "&")
-    .replace(/&deg;/g, "°");
+    .replace(/&deg;/g, "°")
 
-  return newText;
+    .replace(/&Omicron;/g, "Ο")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rsquo;/g, "’");
+
+  return newText;a
 };
