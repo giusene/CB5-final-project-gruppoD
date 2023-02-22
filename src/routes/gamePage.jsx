@@ -30,6 +30,7 @@ const GamePage = () => {
   const [color, setColor] = useState(
     "linear-gradient(to bottom, #2d92ff, #3fa8ff, #5ebcff, #82cfff, #a8e1ff)"
   );
+  const [answerColor, setAnswerColor] = useState("white");
   const [text, setText] = useState("First manche");
 
   useEffect(() => {
@@ -104,8 +105,16 @@ const GamePage = () => {
   const getAnswer = (answer) => {
     if (answer === questions[questionNumber].correct_answer) {
       setScore(score + 1);
+      setAnswerColor("green");
+      console.log("nice");
+    } else {
+      setAnswerColor("red");
     }
-    setQuestionNumber(questionNumber + 1);
+    setTimeout(() => {
+      setQuestionNumber(questionNumber + 1);
+      setAnswerColor("white");
+    }, 1000);
+
     console.log(score);
   };
 
@@ -123,36 +132,6 @@ const GamePage = () => {
             </button>
           </Link>
         </div>
-        {/* <video
-          className={`${styles.background} ${
-            backgroundControl !== 0 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={first} type="video/mp4" />
-        </video>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 1 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={second} type="video/mp4" />
-        </video>
-        <video
-          className={`${styles.background} ${
-            backgroundControl !== 2 && styles.noBackground
-          }`}
-          autoPlay
-          loop
-          muted
-        >
-          <source src={third} type="video/mp4" />
-        </video> */}
 
         <div className={styles.Question}>
           <div className={styles.userInfo}>
@@ -176,7 +155,10 @@ const GamePage = () => {
               questions[questionNumber].allQuestions.map((item, index) => (
                 <h5
                   className={styles.Answer}
-                  onClick={() => getAnswer(textReplacer(item))}
+                  style={{
+                    backgroundColor: answerColor,
+                  }}
+                  onMouseUp={() => getAnswer(textReplacer(item))}
                   key={index}
                 >
                   {textReplacer(item)}
