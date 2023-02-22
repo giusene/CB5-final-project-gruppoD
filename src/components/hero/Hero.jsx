@@ -5,23 +5,31 @@ import styles from "./styles.module.scss";
 import { Outlet } from "react-router-dom";
 import ModalHome from "../modalHome/ModalHome";
 
+import elevatorMusic from "./music/elevatorMusic.mp3";
+
 const Hero = () => {
   
   return (
     <>
       <div className={styles.Hero}>
+        <audio
+          autoPlay
+          loop
+        >
+          <source src={elevatorMusic} type="audio/mpeg" />
+        </audio>
         <div className={styles.containerTitle}>
           <h1 className={styles.title}>Quiz-Zone!</h1>
           <img className={styles.logo} src="./../logo.png" alt="Logo" />
         </div>
         <p className={styles.description}>
-          Benvenuto al <b>Quiz-Zone</b>, dove potrai testare le tue conoscenze
-          in un'esperienza divertente e coinvolgente. Il gioco è composto da{" "}
-          <b>tre manches</b>, ognuna della durata di un minuto. Il tuo obiettivo
-          è accumulare il punteggio più alto possibile rispondendo alle domande
-          fino allo scadere del tempo. Ogni domanda corretta ti farà guadagnare{" "}
-          <b>10 punti</b>. Non perdere tempo, metti alla prova le tue conoscenze
-          e raggiungi la cima della classifica!!!
+          Welcome to the <b>Quiz-Zone </b>, where you can test your knowledge
+          while experiencing a fun and engaging game. The quiz consists of {""}
+          <b>three rounds </b>, lasting 60 seconds each. Your goal is
+          to accumulate the highest amount of points possible by answering the questions
+          until time runs out. Each correct question will earn you {""}
+          <b>1 point </b>. Don't waste any time, test your skills
+          and reach the top of the leaderboard!
         </p>
         <ModalHome />
      </div>
