@@ -7,8 +7,13 @@ import { database } from "./utils/firebase";
 import { onValue, ref } from "firebase/database";
 import HomeLayout from "./components/homeLayout/HomeLayout";
 import { Outlet } from "react-router-dom";
+import { ApplicationCtx } from "./store";
+import { useReducer } from "react";
+import { initialState } from "./store";
+import { globalReducer } from "./store/reducers";
 
 function App() {
+  const [state, dispatch] = useReducer(globalReducer, initialState);
   const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
@@ -36,13 +41,21 @@ function App() {
             <img src="./../logo-iniziale.gif" />
           </div>
         )}
+
         <HomeLayout>
-          <Hero />
-          <Login />
-          <Footer />
+          <ApplicationCtx.Provider value={{ state, dispatch }}>
+            {!state.user.username && !localStorage.getItem("user") ? (
+              <Login />
+            ) : (
+              <>
+                <Hero />
+                <Footer />
+              </>
+            )}
+          </ApplicationCtx.Provider>
         </HomeLayout>
+        <Outlet />
       </div>
-      <Outlet />
     </>
   );
 }
