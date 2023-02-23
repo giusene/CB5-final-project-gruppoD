@@ -31,6 +31,7 @@ const ModalScore = ({ score }) => {
   const handleButtonClick = () => {
     navigate("/");
   };
+
   const aggiungiGiocatore = () => {
     const avatar = JSON.parse(localStorage.getItem("user")).avatar;
     const name = JSON.parse(localStorage.getItem("user")).username;
@@ -46,7 +47,9 @@ const ModalScore = ({ score }) => {
 
   const scoreButtonClick = () => {
     navigate("/leaderBoard");
-    aggiungiGiocatore();
+    if (score > 18) {
+      aggiungiGiocatore();
+    }
   };
 
   return (

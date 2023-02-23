@@ -108,6 +108,7 @@ const GamePage = () => {
         setAnswerColor("rgba(104, 229, 85, 0.8)");
         playCorrect();
       } else {
+        setHasAnswered(true);
         setAnswerColor("rgba(255, 60, 60, 0.8)");
         playIncorrect();
       }
