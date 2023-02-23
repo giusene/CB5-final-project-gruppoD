@@ -3,6 +3,7 @@ import styles from "./leaderBoard.module.scss";
 import { ref, onValue } from "firebase/database";
 import { database } from "./../utils/firebase";
 import { options } from './../components/select/Select';
+import first from "./backgrounds/first.gif";
 
 const LeaderBoard = () => {
   const [scores, setScores] = useState([]);
@@ -24,6 +25,10 @@ const LeaderBoard = () => {
 
   return (
     <div className={styles.container}>
+        <img
+        src={first}
+        className={styles.background}
+      />
       <h2>Leaderboard</h2>
       <table>
         <thead>
