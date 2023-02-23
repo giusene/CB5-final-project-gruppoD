@@ -1,14 +1,21 @@
 .container {
-  .background {
-    min-width: 100%;
-    min-height: 400px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -5;
-    background-image: contain;
-    filter: blur(2px);
-  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    .background {
+        min-width: 100%;
+        min-height: 400px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        background-image: contain;
+        filter: blur(2px);
+    }
+
 
   h2 {
     text-align: center;
@@ -44,3 +51,24 @@
     }
   }
 }
+
+.BtnHome {
+  border: none;
+  border-radius: 10px;
+  background-color : rgb(134, 158, 228);
+  color: white;
+  text-align: center ;
+  font-size: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    color: white;
+  }
+}
+}
+
