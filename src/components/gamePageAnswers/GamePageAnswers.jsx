@@ -18,7 +18,7 @@ export default function GamePageAnswers({
               style={{
                 backgroundColor: answerColor,
               }}
-              onClick={() => getAnswer(textReplacer(item))}
+              onMouseDown={() => getAnswer(textReplacer(item))}
               key={index}
             >
               {textReplacer(item)}
