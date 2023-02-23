@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import SelectOptions from "../select/Select";
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ApplicationCtx } from "../../store";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
-  const onHandleSubmit = (e) => {
-    e.preventDefault();
-    dispatch({ type: "SET_USERNAME", payload: username });
+  const [avatar, setAvatar] = useState(1);
+  const { dispatch } = useContext(ApplicationCtx);
+  const navigate = useNavigate();
+
+  const onHandleSubmit = async (e) => {
+    const onHandleSubmit = (e) => {
+      e.preventDefault();
+      dispatch({ type: "SET_USERNAME", payload: username });
+    };
+    navigate("/gamePage");
   };
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("user");
+    if (storedUsername) {
+      const { username, avatar } = JSON.parse(storedUsername);
+      setUsername(username);
+    }
+  }, []);
 
   return (
     <div className={styles.Login}>
       <form onSubmit={onHandleSubmit}>
         <h2>Choose your Avatar</h2>
-        <SelectOptions />
+        <SelectOptions setAvatar={setAvatar} />
 
         <h2>Choose your Nickname</h2>
         <input
@@ -25,9 +41,7 @@ const Login = (options) => {
           name="username"
           placeholder="Type your Nickname..."
         />
-        <Link to={"/gamePage"}>
-          <input className={styles.BtnLogin} type="submit" value="Login" />
-        </Link>
+        <input className={styles.BtnLogin} type="submit" value="Login" />
       </form>
 
       <p></p>
