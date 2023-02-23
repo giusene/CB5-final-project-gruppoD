@@ -33,6 +33,12 @@ export const options = [
     title: "Hulk Davy",
     image: "./davin.png",
   },
+  {
+    avatar: 6,
+    value: "senex",
+    title: "Evil Senex",
+    image: "./senex.png",
+  },
 ];
 
 export default function Select({ setAvatar }) {

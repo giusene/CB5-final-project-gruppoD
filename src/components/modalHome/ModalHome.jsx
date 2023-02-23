@@ -3,7 +3,7 @@ import { MdSportsScore } from "react-icons/md";
 import styles from "./styles.module.scss";
 import { ref, onValue } from "firebase/database";
 import { database } from "./../../utils/firebase";
-import { options } from './../select/Select';
+import { options } from "./../select/Select";
 
 const ModalHome = () => {
   const [showModal, setShowModal] = useState(false);
@@ -34,9 +34,9 @@ const ModalHome = () => {
       <button className={styles.btnScore} onClick={openModal}>
         <h4>Leaderboard</h4>
         <span>
-            <MdSportsScore />
+          <MdSportsScore />
         </span>
-        </button>
+      </button>
       {showModal && (
         <div className={`${styles.Modal} ${showModal ? styles.open : ""}`}>
           <div className={styles.Modal}>
@@ -46,7 +46,7 @@ const ModalHome = () => {
                 {scores.map((score) => (
                   <li key={score.id}>
                     <div className={styles.name}>
-                      <img src={options.find((option) => option.avatar === score.avatar).image} alt={score.name} />
+                      <img src={score.avatar} alt={score.name} />
                       <h4>{score.name}</h4>
                     </div>
                     <div className={styles.score}>
