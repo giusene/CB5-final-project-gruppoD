@@ -7,7 +7,7 @@ import { writeDb } from "../../utils/writeDb";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
-  const [avatar, setAvatar] = useState(1);
+  const [avatar, setAvatar] = useState("./senex.png");
   const { dispatch } = useContext(ApplicationCtx);
 
   const navigate = useNavigate();
