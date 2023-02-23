@@ -105,10 +105,10 @@ const GamePage = () => {
       if (answer === questions[questionNumber].correct_answer) {
         setScore(score + 1);
         setHasAnswered(true);
-        setAnswerColor("green");
+        setAnswerColor("rgba(104, 229, 85, 0.8)");
         playCorrect();
       } else {
-        setAnswerColor("red");
+        setAnswerColor("rgba(255, 60, 60, 0.8)");
         playIncorrect();
       }
       setTimeout(() => {
