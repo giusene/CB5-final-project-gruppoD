@@ -12,7 +12,6 @@ const ModalScore = ({ score }) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
-
   useEffect(() => {
     setTimeout(() => setShowModal(true), 180000);
   }, []);
@@ -36,13 +35,16 @@ const ModalScore = ({ score }) => {
             <h3 className={styles.Content}>
               Your score is: <span className={styles.Score}>{score}</span>
             </h3>
-            <div className={styles.btnContainer}> 
+            <div className={styles.btnContainer}>
               <button className={styles.BtnHome} onClick={handleButtonClick}>
                 <FontAwesomeIcon icon={faHouseChimneyUser} />
               </button>
               <button className={styles.btnScore} onClick={scoreButtonClick}>
                 <Link className={styles.link} to="/leaderBoard">
-                  <h4>Leaderboard</h4> <span><MdSportsScore /></span>
+                  <h4>Leaderboard</h4>{" "}
+                  <span>
+                    <MdSportsScore />
+                  </span>
                 </Link>
               </button>
             </div>
