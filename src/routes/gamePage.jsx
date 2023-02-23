@@ -77,6 +77,7 @@ const GamePage = () => {
       setHardQuestions(hardQuestions);
       setTimeout(() => {
         setQuestions(mediumQuestions);
+        setQuestionNumber(0);
         setBackgroundControl(1);
         setText("Second manche");
         setColor(
@@ -85,6 +86,7 @@ const GamePage = () => {
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
+        setQuestionNumber(0);
         setBackgroundControl(2);
         setText("Third manche");
         setColor(
