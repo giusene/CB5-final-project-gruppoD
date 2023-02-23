@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Home from "./routes/home/Home";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,14 +9,18 @@ import {
   Route,
 } from "react-router-dom";
 import GamePage from "./routes/gamePage";
-import ErrorPage from './error-page';
+import ErrorPage from "./error-page";
 import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<App />} errorElement={<ErrorPage />} />
-      <Route path="gamePage" element={<GamePage />} errorElement={<ErrorPage />} />
+      <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+      <Route
+        path="gamePage"
+        element={<GamePage />}
+        errorElement={<ErrorPage />}
+      />
     </Route>
   )
 );
