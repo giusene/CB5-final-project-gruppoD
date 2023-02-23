@@ -200,7 +200,7 @@ const GamePage = () => {
       </div>
 
       <Outlet />
-      <ModalScore score={score} />
+      <ModalScore scoreboard={score} />
     </>
   );
 };

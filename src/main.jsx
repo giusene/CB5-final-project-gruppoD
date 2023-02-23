@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import GamePage from "./routes/gamePage";
+import LeaderBoard from "./routes/leaderBoard";
 import ErrorPage from './error-page';
 import "./index.css";
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<App />} errorElement={<ErrorPage />} />
       <Route path="gamePage" element={<GamePage />} errorElement={<ErrorPage />} />
+      <Route path="leaderBoard" element={<LeaderBoard />} errorElement={<ErrorPage />} />
     </Route>
   )
 );
