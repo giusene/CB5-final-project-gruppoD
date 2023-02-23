@@ -56,7 +56,7 @@ export default function Select({ setAvatar }) {
     const getLocalStorage = localStorage.getItem("user");
     if (getLocalStorage) {
       const { avatar } = JSON.parse(getLocalStorage);
-      const getAvatar = options.filter((item) => item.id === avatar);
+      const getAvatar = options.filter((item) => item.image === avatar);
       setSelectedOption(getAvatar[0]);
     }
   }, []);
