@@ -30,39 +30,39 @@ const LeaderBoard = ({}) => {
     navigate("/");
   };
 
-
   return (
     <div className={styles.container}>
       <img src={first} className={styles.background} />
-      <h2>Leaderboard</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Avatar</th>
-            <th>Name</th>
-
-            <th>Totale Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {scores.map((score) => (
-            <tr key={score.id}>
-              <td>
-                <img src={score.avatar} alt={score.name} />
-                {console.log(score.name)}
-              </td>
-              <td>{score.name}</td>
-
-              <td>{score.score}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
       <button className={styles.BtnHome} onClick={handleButtonClick}>
                 <Link className={styles.link} to="/">
                   <AiTwotoneHome className={styles.icon}/> 
                 </Link>
       </button>
+      <h2>Leaderboard</h2>
+      <div className={styles.table}>
+        <table>
+          <thead>
+            <tr>
+              <th>Avatar</th>
+              <th>Name</th>
+              <th>Total Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {scores.map((score) => (
+              <tr key={score.id}>
+                <td>
+                  <img src={score.avatar} alt={score.name} />
+                  {console.log(score.name)}
+                </td>
+                <td>{score.name}</td>
+
+                <td>{score.score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
