@@ -21,6 +21,7 @@
     top: 0;
     left: 0;
     z-index: -5;
+    filter: blur(2px);
   }
 
   .modalContent {
@@ -31,7 +32,7 @@
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
-  
+
     .Title {
       text-align: center;
       font-size: 50px;
@@ -49,6 +50,11 @@
     }
   }
 
+  .btnContainer {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+
   .BtnHome {
     height: 60px;
     width: 60px;
@@ -65,4 +71,37 @@
     }
   }
 
+  .btnScore {
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(134, 158, 228);
+    color: #eeeeee;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+   .link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   }
+    
+
+    span {
+      font-size: 20px;
+    }
+    &:hover {
+    
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+  
+}
 }

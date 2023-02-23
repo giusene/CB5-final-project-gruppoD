@@ -1,8 +1,10 @@
 import styles from "./styles.module.scss";
 import { Outlet, useNavigate } from "react-router-dom";
 import { GET } from "../utils/api";
+
 import { useState, useEffect, useContext } from "react";
 import { ApplicationCtx } from "../store";
+
 
 import sortArrayRandomly from "../utils/sortArrayRandomly";
 import useSound from "use-sound";
@@ -23,6 +25,7 @@ const GamePage = () => {
   const [questions, setQuestions] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
+  const [hasAnswered, setHasAnswered] = useState(false); // stato per evitare che vengano assegnati più punti dalla stessa domanda
   const [easyQuestions, setEasyQuestions] = useState([]);
   const [mediumQuestions, setMediumQuestions] = useState([]);
   const [hardQuestions, setHardQuestions] = useState([]);
@@ -30,6 +33,10 @@ const GamePage = () => {
 
   //background UseStates
   const [backgroundControl, setBackgroundControl] = useState(0);
+  const [color, setColor] = useState(
+    "linear-gradient(to bottom, #2d92ff, #3fa8ff, #5ebcff, #82cfff, #a8e1ff)"
+  );
+  const [answerColor, setAnswerColor] = useState("white");
   const [text, setText] = useState("First manche");
 
   //sound UseStates
@@ -73,11 +80,17 @@ const GamePage = () => {
         setQuestions(mediumQuestions);
         setBackgroundControl(1);
         setText("Second manche");
+        setColor(
+          "linear-gradient(to bottom, #ffaf34, #ff9b2d, #ff862b, #ff6f2d, #ff5633)"
+        );
       }, 60000);
       setTimeout(() => {
         setQuestions(hardQuestions);
         setBackgroundControl(2);
         setText("Third manche");
+        setColor(
+          "linear-gradient(to bottom, #dc0000, #b60b04, #920f06, #6f1004, #4e0e00)"
+        );
       }, 120000);
     });
   }, []);
@@ -87,20 +100,31 @@ const GamePage = () => {
   };
 
   const getAnswer = (answer) => {
-    if (answer === questions[questionNumber].correct_answer) {
-      setScore(score + 1);
-      playCorrect();
-    } else {
-      playIncorrect();
+    if (!hasAnswered) {
+      if (answer === questions[questionNumber].correct_answer) {
+        setScore(score + 1);
+        setHasAnswered(true);
+        setAnswerColor("green");
+        playCorrect();
+      } else {
+        setAnswerColor("red");
+        playIncorrect();
+      }
+      setTimeout(() => {
+        setQuestionNumber(questionNumber + 1);
+        setHasAnswered(false);
+        setAnswerColor("white");
+      }, 1000);
+
+      console.log(score);
     }
 
-    setQuestionNumber(questionNumber + 1);
-    console.log(score);
   };
 
   return (
     <>
       <div className={styles.GamePage}>
+
         <GamePageButtons
           navigate={navigate}
           text={text}
@@ -118,10 +142,12 @@ const GamePage = () => {
           getAnswer={getAnswer}
           score={score}
         />
+
+        
       </div>
 
       <Outlet />
-      <ModalScore score={score} />
+      <ModalScore scoreboard={score} />
     </>
   );
 };

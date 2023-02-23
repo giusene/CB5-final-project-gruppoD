@@ -2,33 +2,33 @@ import styles from "./styles.module.scss";
 import { useContext, useEffect, useState } from "react";
 import { ApplicationCtx } from "../../store";
 
-const options = [
+ export const options = [
   {
-    id: 1,
+    avatar: 1,
     value: "antonella",
     title: "Captain Anto",
     image: "./antonella.png",
   },
   {
-    id: 2,
+    avatar: 2,
     value: "carlotta",
     title: "Iron Carly",
     image: "./carlotta.png",
   },
   {
-    id: 3,
+    avatar: 3,
     value: "francesca",
     title: "Fantastic Fra",
     image: "./francesca.png",
   },
   {
-    id: 4,
+    avatar: 4,
     value: "martina",
     title: "Wonder Marty",
     image: "./martina.png",
   },
   {
-    id: 5,
+    avatar: 5,
     value: "davin",
     title: "Hulk Davy",
     image: "./davin.png",
@@ -70,7 +70,7 @@ export default function Select({ setAvatar }) {
             <img src={selectedOption.image} alt={selectedOption.title} />
           </>
         ) : (
-          "Select..."
+          "Select your Avatar. . ."
         )}
       </div>
       {isOpen && (
