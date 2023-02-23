@@ -1,41 +1,30 @@
 import styles from "./styles.module.scss";
-import first from "./backgrounds/first.webm";
-import second from "./backgrounds/second.webm";
-import third from "./backgrounds/third.webm";
+import first from "./backgrounds/first.gif";
+import second from "./backgrounds/second.gif";
+import third from "./backgrounds/third.gif";
 
 export default function BackgroundImg({ backgroundControl }) {
   return (
     <>
-      <video
+      <img
+        src={first}
         className={`${styles.background} ${
           backgroundControl !== 0 && styles.noBackground
         }`}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={first} type="video/mp4" />
-      </video>
-      <video
+      />
+
+      <img
+        src={second}
         className={`${styles.background} ${
           backgroundControl !== 1 && styles.noBackground
         }`}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={second} type="video/mp4" />
-      </video>
-      <video
+      />
+      <img
+        src={third}
         className={`${styles.background} ${
           backgroundControl !== 2 && styles.noBackground
         }`}
-        autoPlay
-        loop
-        muted
-      >
-        <source src={third} type="video/mp4" />
-      </video>
+      />
     </>
   );
 }

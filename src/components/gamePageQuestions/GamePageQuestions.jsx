@@ -5,6 +5,7 @@ import { useEffect } from "react";
 export default function GamePageQuestions({ username, question }) {
   console.log(localStorage.getItem("user"));
 
+
   //   useEffect(() => {
   //     if (window) {
   //       console.log(localStorage.getItem("username"));
