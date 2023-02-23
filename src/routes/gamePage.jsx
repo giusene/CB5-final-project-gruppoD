@@ -5,7 +5,6 @@ import { GET } from "../utils/api";
 import { useState, useEffect, useContext } from "react";
 import { ApplicationCtx } from "../store";
 
-
 import sortArrayRandomly from "../utils/sortArrayRandomly";
 import useSound from "use-sound";
 import soundCorrect from "./sounds/sound_correct.mp3";
@@ -118,13 +117,11 @@ const GamePage = () => {
 
       console.log(score);
     }
-
   };
 
   return (
     <>
       <div className={styles.GamePage}>
-
         <GamePageButtons
           navigate={navigate}
           text={text}
@@ -141,9 +138,8 @@ const GamePage = () => {
           question={questions[questionNumber]}
           getAnswer={getAnswer}
           score={score}
+          answerColor={answerColor}
         />
-
-        
       </div>
 
       <Outlet />

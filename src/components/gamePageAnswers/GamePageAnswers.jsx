@@ -1,7 +1,12 @@
 import styles from "./styles.module.scss";
 import { textReplacer } from "../../utils/textReplacer";
 
-export default function GamePageAnswers({ question, getAnswer, score }) {
+export default function GamePageAnswers({
+  question,
+  getAnswer,
+  score,
+  answerColor,
+}) {
   return (
     <div className={styles.AnswerContainer}>
       <h4>Correct Answer(s): {score}</h4>
@@ -10,6 +15,9 @@ export default function GamePageAnswers({ question, getAnswer, score }) {
           question.allQuestions.map((item, index) => (
             <h5
               className={styles.Answer}
+              style={{
+                backgroundColor: answerColor,
+              }}
               onClick={() => getAnswer(textReplacer(item))}
               key={index}
             >
