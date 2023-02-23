@@ -43,7 +43,7 @@ const ModalHome = () => {
             <div className={styles.modalContent}>
               <h2 className={styles.modalTitle}>Best Scores</h2>
               <ul>
-                {scores.map((score) => (
+                {scores.slice(0, 5).map((score) => (
                   <li key={score.id}>
                     <div className={styles.name}>
                       <img src={score.avatar} alt={score.name} />
