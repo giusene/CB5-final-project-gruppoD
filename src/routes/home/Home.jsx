@@ -40,12 +40,13 @@ export default function Home() {
             <img src="./../logo-iniziale.gif" />
           </div>
         )}
-
-        <HomeLayout>
-          <Hero />
-          <Login />
-          <Footer />
-        </HomeLayout>
+        <ApplicationCtx.Provider value={{ state, dispatch }}>
+          <HomeLayout>
+            <Hero />
+            <Login />
+            <Footer />
+          </HomeLayout>
+        </ApplicationCtx.Provider>
         <Outlet />
       </div>
     </>

@@ -11,10 +11,12 @@ const Login = (options) => {
   const navigate = useNavigate();
 
   const onHandleSubmit = async (e) => {
-    const onHandleSubmit = (e) => {
-      e.preventDefault();
-      dispatch({ type: "SET_USERNAME", payload: username });
-    };
+    e.preventDefault();
+    console.log(avatar);
+    await dispatch({
+      type: "SET_USERNAME",
+      payload: { username: username, avatar: avatar },
+    });
     navigate("/gamePage");
   };
 
