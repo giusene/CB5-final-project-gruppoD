@@ -43,12 +43,23 @@
   }
 
   .description {
+    width: 60%;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     color: rgb(0, 59, 107);
     transform: translateY(-20px);
     animation: fadeInUp 1s 5s forwards;
+  }
+
+  audio {
+    height: 40px;
+    width: 110px;
+    align-self: start;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: rgb(134, 158, 228);
   }
 }
 

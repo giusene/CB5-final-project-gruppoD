@@ -9,18 +9,24 @@ import {
   Route,
 } from "react-router-dom";
 import GamePage from "./routes/gamePage";
-import ErrorPage from "./error-page";
+
+import LeaderBoard from "./routes/leaderBoard";
+import ErrorPage from './error-page';
+
 import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
+
       <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
       <Route
         path="gamePage"
         element={<GamePage />}
         errorElement={<ErrorPage />}
       />
+     <Route path="leaderBoard" element={<LeaderBoard />} errorElement={<ErrorPage />} />
+
     </Route>
   )
 );

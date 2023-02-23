@@ -16,7 +16,7 @@ const ModalHome = () => {
   return (
     <div className= {styles.container}>
       <button className={styles.btnScore} onClick={openModal}>
-        <h4>Score Record</h4>
+        <h4>Leaderboard</h4>
         <span>
             <MdSportsScore />
         </span>
@@ -25,7 +25,7 @@ const ModalHome = () => {
         <div className={`${styles.Modal} ${showModal ? styles.open : ""}`}>
           <div className={styles.Modal}>
             <div className={styles.modalContent}>
-              <h2 className={styles.modalTitle}>Score</h2>
+              <h2 className={styles.modalTitle}>Best Scores</h2>
               <ul>
                 <li>
                   <div className={styles.name}>
