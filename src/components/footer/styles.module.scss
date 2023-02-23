@@ -5,9 +5,10 @@
   background-color: white;
   width: 100%;
   bottom: 0;
+
   h1 {
     color: rgb(0, 59, 107);
-    font-size: 15px;
+    font-size: 20px;
   }
 
   ul {
@@ -17,10 +18,12 @@
     width: 90%;
     list-style-type: none;
     padding-left: 5px;
+
     a {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
     }
+
     li {
       display: flex;
       flex-direction: column;
@@ -29,6 +32,7 @@
       img {
         width: 60px;
       }
+
       a {
         img {
           width: 28px;
@@ -46,9 +50,11 @@
 @media only screen and (min-width: 1280px) {
   .Footer {
     align-items: center;
+
     ul {
       width: 50%;
     }
+    
     a:hover {
       color: gray;
     }

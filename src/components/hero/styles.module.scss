@@ -27,7 +27,7 @@
     .title {
       font-family: "Fortnite";
       text-transform: uppercase;
-      font-size: 45px;
+      font-size: 50px;
       color: rgb(9, 83, 143);
       margin-right: 20px;
       transform: translateY(-20px);
@@ -43,9 +43,9 @@
   }
 
   .description {
-    width: 60%;
-    font-weight: bold;
+    width: 80%;
     font-size: 16px;
+    font-weight: bold;
     text-align: center;
     color: rgb(0, 59, 107);
     transform: translateY(-20px);
@@ -56,6 +56,7 @@
     height: 40px;
     width: 110px;
     align-self: start;
+    margin-left: 14%;
   }
 
   audio::-webkit-media-controls-panel {
