@@ -1,12 +1,9 @@
 import styles from "./styles.module.scss";
 import { textReplacer } from "../../utils/textReplacer";
 import { useEffect } from "react";
-import { options } from "../select/Select";
 
 export default function GamePageQuestions({ username, question }) {
   console.log(localStorage.getItem("user"));
-
-  const url = JSON.parse(localStorage.getItem("user")).avatar.avatarId;
 
   //   useEffect(() => {
   //     if (window) {
