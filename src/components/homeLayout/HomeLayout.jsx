@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import background from "./img/background.mp4";
+import background from "./img/background.gif";
 import avatar1 from "./img/avatar1.png";
 import avatar2 from "./img/avatar2.png";
 import { Outlet } from "react-router-dom";
@@ -37,9 +37,8 @@ export default function HomeLayout({ children }) {
   return (
     <>
       <div className={styles.Layout}>
-        <video className={styles.background} autoPlay loop muted>
-          <source src={background} type="video/mp4" />
-        </video>
+        <img src={background} className={styles.background} />
+
         <div className={styles.images}>
           <div className={styles.avatar1}>
             <img className={styles.avatar1} src={avatar1} alt="avatar" />
@@ -94,9 +93,7 @@ export default function HomeLayout({ children }) {
         <div className={styles.Children}>{children}</div>
       </div>
 
-
       <Outlet />
-
     </>
   );
 }

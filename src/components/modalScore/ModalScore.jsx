@@ -1,13 +1,19 @@
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
+
 import { database } from "../../utils/firebase";
 import { onValue, ref } from "firebase/database";
 import FireworksComponent from "../fireworks/Fireworks";
 import background from "./background.webm";
 import { writeDb } from "../../utils/writeDb";
+
+import { MdSportsScore } from "react-icons/md";
+
+import FireworksComponent from "../fireworks/Fireworks";
+import background from "./background.gif";
 
 const ModalScore = ({ score }) => {
   const navigate = useNavigate();
@@ -41,20 +47,34 @@ const ModalScore = ({ score }) => {
     writeDb(newPlayer, score);
   };
 
+  const scoreButtonClick = () => {
+    navigate("/leaderBoard");
+  };
+
   return (
     <>
       {showModal && (
         <div className={styles.Modal}>
-          <video className={styles.background} autoPlay loop muted>
-            <source src={background} type="video/mp4" />
-          </video>
+          <img src={background} className={styles.background} />
           <FireworksComponent />
           <div className={styles.modalContent}>
-            <h2>Time's Up!</h2>
-            <p>Your score is: {score}</p>
-            <button className={styles.BtnHome} onClick={handleButtonClick}>
-              <FontAwesomeIcon icon={faHouseChimneyUser} />
-            </button>
+            <h2 className={styles.Title}>Time's Up!</h2>
+            <h3 className={styles.Content}>
+              Your score is: <span className={styles.Score}>{score}</span>
+            </h3>
+            <div className={styles.btnContainer}>
+              <button className={styles.BtnHome} onClick={handleButtonClick}>
+                <FontAwesomeIcon icon={faHouseChimneyUser} />
+              </button>
+              <button className={styles.btnScore} onClick={scoreButtonClick}>
+                <Link className={styles.link} to="/leaderBoard">
+                  <h4>Leaderboard</h4>{" "}
+                  <span>
+                    <MdSportsScore />
+                  </span>
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
       )}
