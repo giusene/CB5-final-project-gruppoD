@@ -6,7 +6,7 @@ import { options } from "../select/Select";
 export default function GamePageQuestions({ username, question }) {
   console.log(localStorage.getItem("user"));
 
-  const url = JSON.parse(localStorage.getItem("user")).avatar.avatarId;
+  //   const url = JSON.parse(localStorage.getItem("user")).avatar.avatarId;
 
   //   useEffect(() => {
   //     if (window) {
