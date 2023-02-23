@@ -1,4 +1,5 @@
 .container {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,38 +16,39 @@
         filter: blur(2px);
     }
 
-    h2 {
-    text-align: center;
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border: 1px solid #ddd;
 
-  th,
-  td {
-    padding: 0.75rem;
+  h2 {
     text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 15px;
-    background-color: rgba(185, 255, 255, 0.3);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
 
-    img {
+    th,
+    td {
+      padding: 0.75rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 20px;
+      background-color: rgba(185, 255, 255, 0.3);
+
+      img {
         width: 50px;
         height: 50px;
+      }
     }
 
-  }
+    th {
+      background-color: rgba(78, 123, 165);
+      color: white;
+    }
 
-  th {
-    background-color: rgba(78, 123, 165);
-    color: white;
-  }
-
-  tr:hover {
-    background-color: rgba(255, 255, 255, 0.464);
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.464);
+    }
   }
 }
 
@@ -69,3 +71,4 @@ table {
   }
 }
 }
+

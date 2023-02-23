@@ -3,11 +3,13 @@ import SelectOptions from "../select/Select";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 import { ApplicationCtx } from "../../store";
+import { writeDb } from "../../utils/writeDb";
 
 const Login = (options) => {
   const [username, setUsername] = useState("");
   const [avatar, setAvatar] = useState(1);
   const { dispatch } = useContext(ApplicationCtx);
+
   const navigate = useNavigate();
 
   const onHandleSubmit = async (e) => {
