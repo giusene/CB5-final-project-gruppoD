@@ -1,34 +1,34 @@
 .container {
+  display: flex;
+  justify-content: center;
+  .btnScore {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(134, 158, 228);
+    color: #eeeeee;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    bottom: -40px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    .btnScore {
-        border: none;
-        border-radius: 20px;
-        background-color: rgb(134, 158, 228);
-        color: #eeeeee;
-        padding-left: 10px;
-        cursor: pointer;
-        font-size: 20px;
-        height: 50px;
-        width: 300px;
-        position: absolute;
-        bottom: -40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInDown 1s 5s forwards;
-        span {
-          font-size: 30px;
-        }
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        }
-      }
- .Modal {
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInDown 1s 5s forwards;
+    span {
+      font-size: 30px;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .Modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -85,11 +85,10 @@
             display: flex;
 
             img {
-              width: 18%;
-              height: 18%;
+              width: 60px;
             }
           }
-          
+
           .score {
             display: flex;
             align-items: center;
@@ -100,7 +99,7 @@
               border: none;
               background: none;
             }
-          
+
             .icon {
               color: rgb(78, 123, 165);
               font-size: 18px;
@@ -111,32 +110,27 @@
               }
             }
           }
-
-          
-
         }
       }
-
-    
     }
   }
 }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

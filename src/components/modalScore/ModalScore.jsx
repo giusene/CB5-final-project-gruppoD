@@ -4,16 +4,13 @@ import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
 
+import FireworksComponent from "../fireworks/Fireworks";
 import { database } from "../../utils/firebase";
 import { onValue, ref } from "firebase/database";
-import FireworksComponent from "../fireworks/Fireworks";
-import background from "./background.webm";
+import background from "./background.gif";
 import { writeDb } from "../../utils/writeDb";
 
 import { MdSportsScore } from "react-icons/md";
-
-import FireworksComponent from "../fireworks/Fireworks";
-import background from "./background.gif";
 
 const ModalScore = ({ score }) => {
   const navigate = useNavigate();
@@ -21,7 +18,7 @@ const ModalScore = ({ score }) => {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => setShowModal(true), 180000);
+    setTimeout(() => setShowModal(true), 1800);
     const starCountRef = ref(database);
 
     onValue(starCountRef, (snapshot) => {
@@ -35,20 +32,21 @@ const ModalScore = ({ score }) => {
     navigate("/");
   };
   const aggiungiGiocatore = () => {
+    const avatar = JSON.parse(localStorage.getItem("user")).avatar;
+    const name = JSON.parse(localStorage.getItem("user")).username;
     const newPlayer = {
-      avatar: 1,
-      m1: 12,
-      m2: 10,
-      m3: 5,
-      score: 27,
-      name: "Pippo",
+      avatar: avatar,
+
+      score: score,
+      name: name,
     };
 
-    writeDb(newPlayer, score);
+    writeDb(newPlayer, scores);
   };
 
   const scoreButtonClick = () => {
     navigate("/leaderBoard");
+    aggiungiGiocatore();
   };
 
   return (
