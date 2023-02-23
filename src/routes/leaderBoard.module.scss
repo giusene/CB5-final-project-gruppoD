@@ -1,8 +1,16 @@
-body {
-    background-image: url("./backgrounds/Above-Clouds.gif") ;
-}
 .container {
-h2 {
+    .background {
+        min-width: 100%;
+        min-height: 400px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        background-image: contain;
+        filter: blur(2px);
+    }
+
+    h2 {
     text-align: center;
 }
 table {
