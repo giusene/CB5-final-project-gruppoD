@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { useContext, useEffect, useState } from "react";
 import { ApplicationCtx } from "../../store";
 
- export const options = [
+export const options = [
   {
     avatar: 1,
     value: "antonella",
@@ -48,7 +48,7 @@ export default function Select({ setAvatar }) {
   const handleSelectOption = async (option) => {
     setSelectedOption(option);
     setIsOpen(false);
-    setAvatar(option.id);
+    setAvatar(option.image);
     /*await dispatch({ type: "SET_AVATAR", payload: option.id });*/
   };
 
