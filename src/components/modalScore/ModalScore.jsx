@@ -18,7 +18,7 @@ const ModalScore = ({ score }) => {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => setShowModal(true), 1800);
+    setTimeout(() => setShowModal(true), 180000);
     const starCountRef = ref(database);
 
     onValue(starCountRef, (snapshot) => {
