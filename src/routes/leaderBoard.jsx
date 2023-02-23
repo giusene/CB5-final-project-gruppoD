@@ -4,9 +4,12 @@ import { ref, onValue } from "firebase/database";
 import { database } from "./../utils/firebase";
 import { options } from './../components/select/Select';
 import first from "./backgrounds/first.gif";
+import { AiTwotoneHome } from 'react-icons/ai';
+import { useNavigate, Link } from "react-router-dom";
 
-const LeaderBoard = () => {
+const LeaderBoard = ({}) => {
   const [scores, setScores] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const scoresRef = ref(database, "scoreboard");
@@ -22,6 +25,11 @@ const LeaderBoard = () => {
       setScores(scoresList);
     });
   }, []);
+
+  const handleButtonClick = () => {
+    navigate("/");
+  };
+
 
   return (
     <div className={styles.container}>
@@ -56,6 +64,11 @@ const LeaderBoard = () => {
           ))}
         </tbody>
       </table>
+      <button className={styles.BtnHome} onClick={handleButtonClick}>
+                <Link className={styles.link} to="/">
+                  <AiTwotoneHome className={styles.icon}/> 
+                </Link>
+      </button>
     </div>
   );
 };
