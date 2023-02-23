@@ -6,7 +6,7 @@ import linkedin from "./linkedin.png";
 const Footer = () => {
   return (
     <div className={styles.Footer}>
-      <h1>Creators:</h1>
+      <h1>Software Developers:</h1>
       <ul>
         <li>
           <a>Antonella</a>

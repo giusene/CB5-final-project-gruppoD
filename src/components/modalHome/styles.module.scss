@@ -16,19 +16,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInDown 1s 5s forwards;
-    span {
-      font-size: 30px;
-    }
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    }
-  }
+
+    .btnScore {
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(134, 158, 228);
+        color: #eeeeee;
+        padding-left: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        height: 50px;
+        width: 240px;
+        position: absolute;
+        bottom: -40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInDown 1s 5s forwards;
+        span {
+          font-size: 30px;
+        }
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+      
   .Modal {
+
     position: fixed;
     top: 0;
     left: 0;

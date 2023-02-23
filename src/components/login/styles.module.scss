@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 20%;
 
   form {
     display: flex;
@@ -30,7 +30,7 @@
     padding: 6px 12px;
     text-align: center;
     font-weight: bold;
-    width: 250px;
+    width: 240px;
     height: 30px;
     background-color: rgba(59, 143, 212, 0.308);
     border-radius: 20px;
@@ -43,7 +43,8 @@
   }
 
   .BtnLogin {
-    width: 150px;
+    height: 40px;
+    width: 160px;
     border-radius: 10px;
     background-color:rgb(134, 158, 228);
     color: white;
