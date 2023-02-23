@@ -16,115 +16,97 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInDown 1s 5s forwards;
+    span {
+      font-size: 30px;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 123, 165, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 
-    .btnScore {
-      border: none;
-      border-radius: 20px;
-      background-color: rgb(134, 158, 228);
-      color: #eeeeee;
-      padding-left: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      height: 50px;
-      width: 240px;
-      position: absolute;
-      bottom: -40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInDown 1s 5s forwards;
-      span {
-        font-size: 30px;
-      }
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-      }
+    &.open {
+      animation: fadeIn 0.5s ease-in-out;
     }
 
-    .Modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(78, 123, 165, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
+    .modalContent {
+      position: relative;
+      background-color: #fff;
+      padding: 2rem;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
 
-      &.open {
-        animation: fadeIn 0.5s ease-in-out;
+      .modalTitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
-      .modalContent {
-        position: relative;
-        background-color: #fff;
-        padding: 2rem;
-        width: 80%;
-        max-width: 600px;
-        border-radius: 10px;
-        text-align: center;
+      .modalCloseBtn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+      }
 
-        .modalTitle {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
+      .modalBody {
+        margin-top: 1rem;
+      }
 
-        .modalCloseBtn {
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          background-color: transparent;
-          border: none;
-          font-size: 1rem;
-          cursor: pointer;
-        }
+      ul {
+        list-style: none;
 
-        .modalBody {
-          margin-top: 1rem;
-        }
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0 30px 0 0;
+          border-bottom: 0.5px solid rgb(78, 123, 165);
+          .name {
+            display: flex;
 
-        ul {
-          list-style: none;
+            img {
+              width: 60px;
+            }
+          }
 
-          li {
+          .score {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 0 30px 0 0;
-            border-bottom: 0.5px solid rgb(78, 123, 165);
-            .name {
-              display: flex;
+            gap: 20px;
 
-              img {
-                width: 60px;
-              }
+            button {
+              border: none;
+              background: none;
             }
 
-            .score {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 20px;
+            .icon {
+              color: rgb(78, 123, 165);
+              font-size: 18px;
+              cursor: pointer;
 
-              button {
-                border: none;
-                background: none;
-              }
-
-              .icon {
-                color: rgb(78, 123, 165);
-                font-size: 18px;
-                cursor: pointer;
-
-                &:hover {
-                  color: blue;
-                }
+              &:hover {
+                color: blue;
               }
             }
           }
@@ -132,23 +114,23 @@
       }
     }
   }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
