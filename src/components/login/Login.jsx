@@ -13,7 +13,7 @@ const Login = (options) => {
   const onHandleSubmit = async (e) => {
     const onHandleSubmit = (e) => {
       e.preventDefault();
-      dispatch({ type: "SET_USERNAME", payload: username, avatar });
+      dispatch({ type: "SET_USERNAME", payload: username });
     };
     navigate("/gamePage");
   };
