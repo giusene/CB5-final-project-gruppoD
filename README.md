@@ -25,10 +25,7 @@ we also used <strong>Firebase</strong> to store user scores and <strong>Vercel</
 Some of the graphic elements were designed using <strong>Canva</strong>. <br>
 We took advantage of some packages available on <strong>npm</strong> to insert audio and visual effects, <br>
 such as the sounds for each correct or wrong answer and the final fireworks. <br>
-We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</strong> and <strong>GitHub</strong>. <br>
-We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
-Moreover, we tried to take into account what a user can expect from a single-player game <br>
-to offer a better <strong>user experience</strong>. <br><br>
+We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</strong> and <strong>GitHub</strong>. <br><br>
 <img width="50px" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" style="padding-right:10px;" alt="React JS" />
 <img width="50px" src="https://vitejs.dev/logo-with-shadow.png" style="padding-right:10px;" alt="Vite JS" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" style="padding-right:10px;" alt="SASS" />
@@ -38,7 +35,12 @@ to offer a better <strong>user experience</strong>. <br><br>
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" style="padding-right:10px;" alt="NPM" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="padding-right:10px;" alt="Visual Studio Code" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" alt="Git" />
-<img width="50px" src="https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png" alt="GitHub" />
+<img width="50px" src="https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png" alt="GitHub" /> <br><br>
+
+We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
+Moreover, we tried to take into account what a user can expect from a single-player game <br>
+to offer a better <strong>user experience</strong>. <br><br>
+<img width="33%" src="https://imgbox.com/7G28MDLy" alt="Mobile"/>
 </p>
 
 ## Deep dive:
