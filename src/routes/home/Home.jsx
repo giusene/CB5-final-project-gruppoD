@@ -21,8 +21,6 @@ export default function Home() {
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       const { scoreboard } = data;
-
-      console.log("SCOREBOARD: ", scoreboard);
     });
 
     const timer = setTimeout(() => {

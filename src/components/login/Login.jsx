@@ -14,7 +14,7 @@ const Login = (options) => {
 
   const onHandleSubmit = async (e) => {
     e.preventDefault();
-    console.log(avatar);
+
     await dispatch({
       type: "SET_USERNAME",
       payload: { username: username, avatar: avatar },

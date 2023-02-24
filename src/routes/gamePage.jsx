@@ -116,7 +116,7 @@ const GamePage = () => {
         setQuestionNumber(questionNumber + 1);
         setHasAnswered(false);
         setAnswerColor("white");
-      }, 500);
+      }, 800);
     }
   };
 
