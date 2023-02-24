@@ -7,31 +7,22 @@ const TimeBar = () => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
+    let timer = 0;
     intervalRef.current = setInterval(() => {
-      setProgress((prevProgress) => {
-        const newProgress = prevProgress + 1;
-        if (newProgress >= 59) {
-          clearInterval(intervalRef.current);
-          console.log(fillCount);
-          if (fillCount < 2) {
-            setProgress(0);
-          }
-          setFillCount((prevCount) => prevCount + 1);
-        }
-        return newProgress;
-      });
+      if (timer >= 59) {
+        timer = 0;
+        setFillCount(fillCount + 1);
+      } else {
+        timer++;
+      }
+      setProgress(timer);
     }, 1000);
-
-    return () => clearInterval(intervalRef.current);
-  }, [fillCount]);
-
-  useEffect(() => {
     if (fillCount >= 3) {
       clearInterval(intervalRef.current);
     }
-  }, [fillCount]);
+  }, []);
 
-  const barWidth = ` ${(progress / 59) * 100}%`;
+  const barWidth = `${(progress / 59) * 100}%`;
   const barColor =
     progress >= 55
       ? "rgb(255, 0, 0)"
