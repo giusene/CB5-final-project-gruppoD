@@ -73,5 +73,5 @@ ________________________________________________________________________________
 
 <p align="center">
 At the end of the three rounds, the <strong>total score</strong> of the match will be shown on the screen <br>
-and the user also has the option to return to the Homepage.
+and the user also has the option to return to the Homepage or take a look at the Leaderboard to see if the score was enough to compete.
 </p>
