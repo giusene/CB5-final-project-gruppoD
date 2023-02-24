@@ -14,7 +14,7 @@
   or Scan the following QR Code: <br><br>
   <img width="150px" src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
 </p>
-
+_______________________________________________________________________________________________________________________________________
 ## Introduction:
 
 <p align="center">
@@ -45,10 +45,10 @@ to offer a better <strong>user experience</strong>. <br><br>
 <img align="left" height="550px" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
 <img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/> <br>
 <img align="left" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
-<img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
+<img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/> <br><br>
 
 </p>
-
+_______________________________________________________________________________________________________________________________________
 ## Deep dive:
 
 <p aling="center" width="100%">
@@ -96,5 +96,5 @@ ________________________________________________________________________________
 <p align="center">
 At the end of the three rounds, the <strong>total score</strong> of the match will be shown on the screen <br>
 and the user also has the option to return to the Homepage or take a look at the <strong>Leaderboard</strong> <br>
-to see if the score was enough to compete with the best players.
+to see if the score was enough to compete with the best players and become the next champion!
 </p>
