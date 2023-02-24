@@ -11,7 +11,9 @@
 <p align="center" width="100%">
 <img width="33%" src="https://thumbs2.imgbox.com/8d/d9/NSS8vglW_t.png" alt="Logo">
 <img width="33%" src="https://thumbs2.imgbox.com/57/1e/y8bOdq0y_t.png" alt="Motto"> <br>
-  <a href="https://triviagame-eta.vercel.app"><strong>Click Here to Play</strong></a>
+  <a href="https://triviagame-eta.vercel.app"><strong>Click Here to Play</strong></a> <br>
+  or Scan the following QR Code: <br>
+  <img src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
 </p>
 
 ## Introduction:
