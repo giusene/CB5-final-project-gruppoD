@@ -50,8 +50,8 @@ to offer a better <strong>user experience</strong>. <br><br>
 <p align="center">
 <img align="left" height="550px" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
 <img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/>
-<img align="right" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
-<img align="left" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
+<img align="middle" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
+<img align="middle" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
 </p> <br><br>
 
 _______________________________________________________________________________________________________________________________________
