@@ -26,6 +26,7 @@ Some of the graphic elements were designed using <strong>Canva</strong>. <br>
 We took advantage of some packages available on <strong>npm</strong> to insert audio and visual effects, <br>
 such as the sounds for each correct or wrong answer and the final fireworks. <br>
 We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</strong> and <strong>GitHub</strong>. <br><br>
+
 <img width="50px" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" style="padding-right:10px;" alt="React JS" />
 <img width="50px" src="https://vitejs.dev/logo-with-shadow.png" style="padding-right:10px;" alt="Vite JS" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" style="padding-right:10px;" alt="SASS" />
@@ -40,7 +41,7 @@ We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
 to offer a better <strong>user experience</strong>. <br><br>
-<img width="33%" src="https://imgbox.com/7G28MDLy" alt="Mobile"/>
+<img width="33%" src="https://imgbox.com/bccGFIeA" alt="Mobile"/>
 </p>
 
 ## Deep dive:
