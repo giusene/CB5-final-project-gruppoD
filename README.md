@@ -45,14 +45,14 @@ We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
 to offer a better <strong>user experience</strong>. <br><br>
-</p> <br><br>
+</p> <br>
 
 <p align="center">
 <img align="left" height="550px" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
 <img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/>
 <img align="middle" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
 <img align="middle" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
-</p> <br><br>
+</p> <br>
 
 _______________________________________________________________________________________________________________________________________
 
