@@ -14,7 +14,9 @@
   or Scan the following QR Code: <br><br>
   <img width="150px" src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
 </p>
+
 _______________________________________________________________________________________________________________________________________
+
 ## Introduction:
 
 <p align="center">
@@ -46,9 +48,10 @@ to offer a better <strong>user experience</strong>. <br><br>
 <img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/> <br>
 <img align="left" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
 <img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/> <br><br>
-
 </p>
+
 _______________________________________________________________________________________________________________________________________
+
 ## Deep dive:
 
 <p aling="center" width="100%">
