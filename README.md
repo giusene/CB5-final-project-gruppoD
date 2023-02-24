@@ -10,7 +10,7 @@
 
 <p align="center" width="100%">
 <img width="40%" src="./public/logo-iniziale.gif" alt="Logo"> <br> 
-  <a href="https://triviagame-eta.vercel.app"><strong>Click Here to Play</strong></a> <br>
+  <strong>Click<a href="https://triviagame-eta.vercel.app"> Here </a>to Play</strong> <br>
   or Scan the following QR Code: <br><br>
   <img width="150px" src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
 </p>
@@ -38,19 +38,21 @@ We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" style="padding-right:10px;" alt="NPM" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="padding-right:10px;" alt="Visual Studio Code" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" alt="Git" />
-<img width="50px" src="https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png" alt="GitHub" /> <br><br>
-</p>
+<img width="50px" src="https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png" alt="GitHub" />
+</p> <br><br>
 
 <p align="center">
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
 to offer a better <strong>user experience</strong>. <br><br>
+</p> <br><br>
 
+<p align="center">
 <img align="left" height="550px" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
-<img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/> <br>
+<img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/>
 <img align="left" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
-<img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/> <br><br>
-</p>
+<img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
+</p> <br><br>
 
 _______________________________________________________________________________________________________________________________________
 
