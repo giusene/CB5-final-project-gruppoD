@@ -68,7 +68,7 @@ ________________________________________________________________________________
 
 <p align="center" width="100%">
 <img width="33%" src="https://thumbs2.imgbox.com/c4/7e/3Ts18gTF_t.png" alt="Final score">
-<img width="33%" src="https://thumbs2.imgbox.com/ce/cd/e18UCB6m_t.png" alt="Final Leaderboard">
+<img width="33%" src="https://thumbs2.imgbox.com/3e/26/8T6bpefq_t.png" alt="Final Leaderboard">
 </p>
 
 <p align="center">
