@@ -44,6 +44,7 @@ const Login = (options) => {
           id="username"
           name="username"
           placeholder="Type your Nickname..."
+          required
         />
         <input className={styles.BtnLogin} type="submit" value="Login" />
       </form>
