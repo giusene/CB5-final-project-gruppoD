@@ -42,8 +42,8 @@ We planned it starting from <strong>mobile first</strong> and then making it <st
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
 to offer a better <strong>user experience</strong>. <br><br>
 
-<img width="32%" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
-<img src="https://iili.io/HM5KHYJ.png" alt="Tablet"/> <br>
+<img align="left" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
+<img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/> <br>
 <img src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
 <img src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
 
