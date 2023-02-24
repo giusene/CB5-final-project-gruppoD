@@ -43,8 +43,8 @@ Moreover, we tried to take into account what a user can expect from a single-pla
 to offer a better <strong>user experience</strong>. <br><br>
 <img width="33%" src="https://iili.io/HM5dzxt.png" style="height:550px;padding-right:10px;" alt="Mobile"/>
 <img width="40%" src="https://iili.io/HM5KHYJ.png" style="height:650px;" alt="Tablet"/> <br>
-<img width="80%" src="https://iili.io/HM5yCss.md.png" style="height:750px;" alt="Laptop"/> <br>
-<img width="49%" src="https://iili.io/HM5yCss.md.png" style="height:750px;" alt="Desktop"/>
+<img width="75%" src="https://iili.io/HM5yCss.md.png" style="height:750px;" alt="Laptop"/> <br>
+<img width="80%" src="https://iili.io/HM5yCss.md.png" style="height:750px;" alt="Desktop"/>
 </p>
 
 ## Deep dive:
