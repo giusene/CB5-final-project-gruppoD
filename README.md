@@ -12,7 +12,7 @@
 <img width="40%" src="./public/logo-iniziale.gif" alt="Logo"> <br> 
   <a href="https://triviagame-eta.vercel.app"><strong>Click Here to Play</strong></a> <br>
   or Scan the following QR Code: <br><br>
-  <img width=150px; src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
+  <img width="150px" src="https://thumbs2.imgbox.com/c3/61/2WaFJjFO_t.png" alt="QR Code"/>
 </p>
 
 ## Introduction:
@@ -25,7 +25,14 @@ we also used <strong>Firebase</strong> to store user scores and <strong>Vercel</
 Some of the graphic elements were designed using <strong>Canva</strong>. <br>
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
-to offer a better <strong>user experience</strong>.
+to offer a better <strong>user experience</strong>. <br><br>
+<img width="50px" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" style="padding-right:10px;" alt="React JS" />
+<img width="50px" src="https://vitejs.dev/logo-with-shadow.png" style="padding-right:10px;" alt="Vite JS" />
+<img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" style="padding-right:10px;" alt="SASS" />
+<img width="50px" src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" style="padding-right:10px;" alt="Firebase" />
+<img width="50px" src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" style="padding-right:10px;" alt="Vercel" />
+<img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" alt="Git" />
+<img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" style="padding-right:10px;" alt="NPM" />
 </p>
 
 ## Deep dive:
