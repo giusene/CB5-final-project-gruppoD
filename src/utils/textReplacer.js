@@ -13,7 +13,8 @@ export const textReplacer = (text) => {
 
     .replace(/&Omicron;/g, "Ο")
     .replace(/&lsquo;/g, "‘")
-    .replace(/&rsquo;/g, "’");
+    .replace(/&rsquo;/g, "’")
+    .replace(/&ldquo;/g, "“");
 
-  return newText;a
+  return newText;
 };

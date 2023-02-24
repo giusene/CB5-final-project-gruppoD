@@ -25,15 +25,17 @@
   }
 
   .modalContent {
-    font-family: "Fortnite";
     position: relative;
     background-color: #fff;
     padding: 2rem;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
-
+    p {
+      text-align: center;
+    }
     .Title {
+      font-family: "Fortnite";
       text-align: center;
       font-size: 50px;
       font-weight: bolder;
@@ -44,6 +46,7 @@
       font-weight: bolder;
     }
     .Score {
+      font-family: "Fortnite";
       font-size: 38px;
       font-weight: bolder;
       text-decoration: underline;
@@ -55,53 +58,50 @@
     gap: 40px;
     justify-content: center;
 
-  .BtnHome {
-    height: 60px;
-    width: 60px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgb(134, 158, 228);
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    cursor: pointer;
+    .BtnHome {
+      height: 60px;
+      width: 60px;
+      border-radius: 8px;
+      border: none;
+      background-color: rgb(134, 158, 228);
+      color: white;
+      font-size: 26px;
+      font-weight: bold;
+      cursor: pointer;
 
-    &:hover {
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      &:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .btnScore {
+      border: none;
+      border-radius: 12px;
+      background-color: rgb(134, 158, 228);
+      color: #eeeeee;
+      padding-left: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .link {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+      &:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      }
     }
   }
-
-  .btnScore {
-    border: none;
-    border-radius: 12px;
-    background-color: rgb(134, 158, 228);
-    color: #eeeeee;
-    padding-left: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    
-   .link {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-   }
-    
-
-    span {
-      font-size: 20px;
-    }
-    &:hover {
-    
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    }
-}
-  
-}
 }

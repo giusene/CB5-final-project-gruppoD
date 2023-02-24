@@ -16,6 +16,7 @@ const ModalScore = ({ score }) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [scores, setScores] = useState([]);
+  const [finalText, setFinalText] = useState("");
 
   useEffect(() => {
     setTimeout(() => setShowModal(true), 180000);
@@ -47,10 +48,21 @@ const ModalScore = ({ score }) => {
 
   const scoreButtonClick = () => {
     navigate("/leaderBoard");
-    if (score > 18) {
+    if (score > 15) {
       aggiungiGiocatore();
     }
   };
+  useEffect(() => {
+    if (score < 15) {
+      setFinalText(
+        "Nice try! Unfortunately, you need 15 or more points to enter our leaderboard. Try again!"
+      );
+    } else {
+      setFinalText(
+        "Congratulations! Your score is high enough to allow you to enter our leaderboard! Check it out:"
+      );
+    }
+  });
 
   return (
     <>
@@ -59,10 +71,12 @@ const ModalScore = ({ score }) => {
           <img src={background} className={styles.background} />
           <FireworksComponent />
           <div className={styles.modalContent}>
-            <h2 className={styles.Title}>Time's Up!</h2>
+            <h2 className={styles.Title}>Time's up!</h2>
+
             <h3 className={styles.Content}>
               Your score is: <span className={styles.Score}>{score}</span>
             </h3>
+            <p>{finalText}</p>
             <div className={styles.btnContainer}>
               <button className={styles.BtnHome} onClick={handleButtonClick}>
                 <FontAwesomeIcon icon={faHouseChimneyUser} />

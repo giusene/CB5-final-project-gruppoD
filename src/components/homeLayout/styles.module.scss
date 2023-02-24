@@ -17,7 +17,7 @@
   }
 
   .images {
-    top: 50%;
+    top: 500px;
     left: 50%;
     position: relative;
     transform: translate(-50%, -50%);
@@ -42,12 +42,29 @@
       z-index: -1;
       transform: rotate(-20deg);
     }
+    .avatar3 {
+      width: 160px;
+
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      z-index: -1;
+      transform: rotate(-20deg);
+    }
+    .avatar4 {
+      width: 160px;
+
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      z-index: -1;
+      transform: rotate(30deg);
+    }
 
     .eye {
       position: absolute;
 
       border-radius: 20px;
-      width: 10px;
     }
   }
 }
