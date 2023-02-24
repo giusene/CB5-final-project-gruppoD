@@ -12,10 +12,13 @@ const Footer = () => {
           <a>Antonella</a>
           <img src="./antonella.png" />
           <div className={styles.buttons}>
-            <a href="https://github.com/AntonellaSchillaci">
+            <a target="_blank" href="https://github.com/AntonellaSchillaci">
               <img src={github} />
             </a>
-            <a href="https://www.linkedin.com/in/antonella-schillaci-frontend-dev/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/antonella-schillaci-frontend-dev/"
+            >
               <img src={linkedin} />
             </a>
           </div>
@@ -24,10 +27,10 @@ const Footer = () => {
           <a>Carlotta</a>
           <img src="./carlotta.png" />
           <div className={styles.buttons}>
-            <a href="https://github.com/CarlottaKiri">
+            <a href="https://github.com/CarlottaKiri" target="_blank">
               <img src={github} />
             </a>
-            <a href="https://www.linkedin.com/in/carlottakiri/">
+            <a target="_blank" href="https://www.linkedin.com/in/carlottakiri/">
               <img src={linkedin} />
             </a>
           </div>
@@ -37,10 +40,13 @@ const Footer = () => {
           <img src="./davin.png" />
 
           <div className={styles.buttons}>
-            <a href="https://github.com/DavinGarozzo">
+            <a target="_blank" href="https://github.com/DavinGarozzo">
               <img src={github} />
             </a>
-            <a href="https://www.linkedin.com/in/salvatore-davin-garozzo/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/salvatore-davin-garozzo/"
+            >
               <img src={linkedin} />
             </a>
           </div>
@@ -49,10 +55,13 @@ const Footer = () => {
           <a>Francesca</a>
           <img src="./francesca.png" />
           <div className={styles.buttons}>
-            <a href="https://github.com/IFranc3sca">
+            <a target="_blank" href="https://github.com/IFranc3sca">
               <img src={github} />
             </a>
-            <a href="https://www.linkedin.com/in/francesca-leonardi-919450266/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/francesca-leonardi-919450266/"
+            >
               <img src={linkedin} />
             </a>
           </div>
@@ -61,10 +70,13 @@ const Footer = () => {
           <a>Martina</a>
           <img src="./martina.png" />
           <div className={styles.buttons}>
-            <a href="https://github.com/Martina-LP">
+            <a target="_blank" href="https://github.com/Martina-LP">
               <img src={github} />
             </a>
-            <a href="https://www.linkedin.com/in/martinalaporta/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/martinalaporta/"
+            >
               <img src={linkedin} />
             </a>
           </div>

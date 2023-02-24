@@ -19,7 +19,6 @@
       margin: 0 150px;
     }
   }
-
   .containerTitle {
     display: flex;
     align-items: center;
@@ -44,23 +43,30 @@
 
   .description {
     width: 80%;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgb(0, 59, 107);
+    color: rgb(0, 76, 138);
     transform: translateY(-20px);
     animation: fadeInUp 1s 5s forwards;
   }
 
-  audio {
-    height: 40px;
-    width: 110px;
-    align-self: start;
-    margin-left: 14%;
-  }
-
-  audio::-webkit-media-controls-panel {
+  .audioButton {
+    font-size: 26px;
+    border-radius: 20px;
+    padding: 5px 7px;
+    border: none;
     background-color: rgb(134, 158, 228);
+    color: white;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+
+    &:hover {
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
   }
 }
 
