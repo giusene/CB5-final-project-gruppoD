@@ -39,7 +39,7 @@ We managed the workflow using <strong>Visual Studio Code</strong>, <strong>Git</
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="padding-right:10px;" alt="Visual Studio Code" />
 <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" alt="Git" />
 <img width="50px" src="https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png" alt="GitHub" />
-</p> <br><br>
+</p> <br>
 
 <p align="center">
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
@@ -50,8 +50,8 @@ to offer a better <strong>user experience</strong>. <br><br>
 <p align="center">
 <img align="left" height="550px" src="https://iili.io/HM5dzxt.png" alt="Mobile"/>
 <img align="right" src="https://iili.io/HM5KHYJ.png" alt="Tablet"/>
-<img align="left" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
-<img align="right" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
+<img align="right" src="https://iili.io/HM5yCss.md.png" alt="Laptop"/>
+<img align="left" src="https://iili.io/HM7FgKF.md.png" alt="Desktop"/>
 </p> <br><br>
 
 _______________________________________________________________________________________________________________________________________
