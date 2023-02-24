@@ -3,7 +3,7 @@
 <p align="center"> |
   <a href="https://github.com/AntonellaSchillaci"><img width="6%" height="6%" src="./public/antonella.png" alt="Antonella"> <strong>Antonella Schillaci</strong></a> |
   <a href="https://github.com/CarlottaKiri"><img width="6%" height="6%" src="./public/carlotta.png" alt="Carlotta"> <strong>Carlotta Patané</strong></a> | <br>
-  <a href="https://github.com/DavinGarozzo"><img width="6%" height="6%" src="./public/davin.png" alt="Davin"> <strong>Davin Garozzo</strong></a> |
+  | <a href="https://github.com/DavinGarozzo"><img width="6%" height="6%" src="./public/davin.png" alt="Davin"> <strong>Davin Garozzo</strong></a> |
   <a href="https://github.com/IFranc3sca"><img width="6%" height="6%" src="./public/francesca.png" alt="Francesca"> <strong>Francesca Leonardi</strong></a> |
   <a href="https://github.com/Martina-LP"><img width="6%" height="6%" src="./public/martina.png" alt="Martina"> <strong>Martina La Porta</strong></a> | 
 </p>
