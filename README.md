@@ -9,7 +9,8 @@
 </p>
 
 <p align="center" width="100%">
-<img width="33%" src="https://thumbs2.imgbox.com/8d/d9/NSS8vglW_t.png"> <br>
+<img width="33%" src="https://thumbs2.imgbox.com/8d/d9/NSS8vglW_t.png" alt="Logo">
+<img width="33%" src="https://thumbs2.imgbox.com/57/1e/y8bOdq0y_t.png" alt="Motto"> <br>
   <a href="https://triviagame-eta.vercel.app"><strong>Click Here to Play</strong></a>
 </p>
 
@@ -20,7 +21,7 @@ As a team, we decided to develop something that might be technically interesting
 so we clearly chose to work on something we've never done before: a <strong>quiz game</strong>. <br> 
 This project was created coding mainly in <strong>React + Vite</strong> and <strong>SASS</strong>, <br>
 we also used <strong>Firebase</strong> to store user scores and <strong>Vercel</strong> to deploy it. <br>
-Some of the graphic elements were designed using <strong>Canva</strong> and <strong>Spline</strong>. <br>
+Some of the graphic elements were designed using <strong>Canva</strong>. <br>
 We planned it starting from <strong>mobile first</strong> and then making it <strong>responsive</strong> for tablet and desktop. <br>
 Moreover, we tried to take into account what a user can expect from a single-player game <br>
 to offer a better <strong>user experience</strong>.
@@ -29,10 +30,10 @@ to offer a better <strong>user experience</strong>.
 ## Deep dive:
 
 <p aling="center" width="100%">
-<img width="49%" src="https://thumbs2.imgbox.com/a1/36/KBLmn6Ic_t.png">
-<img width="49%" src="https://thumbs2.imgbox.com/7e/d9/NYgLsOzt_t.png">
-<img width="49%" src="https://thumbs2.imgbox.com/18/3e/m7ecvNBn_t.png">
-<img width="49%" src="https://thumbs2.imgbox.com/c6/6d/kQjJMBHv_t.png">
+<img width="49%" src="https://thumbs2.imgbox.com/08/99/iBF3atf8_t.png" alt="Homepage">
+<img width="49%" src="https://thumbs2.imgbox.com/21/da/RbWF6QC0_t.png" alt="Leaderboard">
+<img width="49%" src="https://thumbs2.imgbox.com/33/0e/wMgp9L9R_t.png" alt="Avatar">
+<img width="49%" src="https://thumbs2.imgbox.com/ec/dd/31hXkoUB_t.png" alt="Nickname">
 </p>
 
 <p align="left">
@@ -45,9 +46,9 @@ to create a personal profile and then proceed to <strong>Login</strong>.
 _______________________________________________________________________________________________________________________________________
 
 <p align="center" width="100%">
-<img width="32%" src="https://thumbs2.imgbox.com/fa/68/GKsKKy01_t.png">
-<img width="32%" src="https://thumbs2.imgbox.com/41/71/3YyJD9RP_t.png">
-<img width="32%" src="https://thumbs2.imgbox.com/6d/8c/3YSIS6jb_t.png">
+<img width="32%" src="https://thumbs2.imgbox.com/fe/ac/hvATLWh9_t.png" alt="First manche">
+<img width="32%" src="https://thumbs2.imgbox.com/50/5e/NYeIshxX_t.png" alt="Second manche">
+<img width="32%" src="https://thumbs2.imgbox.com/a7/49/JRmK0lZB_t.png" alt="Third manche">
 </p>
 
 <p align="left">
@@ -66,10 +67,12 @@ Within this page there are, at the top, also two options to return to the Homepa
 _______________________________________________________________________________________________________________________________________
 
 <p align="center" width="100%">
-<img width="33%" src="https://thumbs2.imgbox.com/ba/9b/J99XAKVP_t.png">
+<img width="33%" src="https://thumbs2.imgbox.com/c4/7e/3Ts18gTF_t.png" alt="Final score">
+<img width="33%" src="https://thumbs2.imgbox.com/3e/26/8T6bpefq_t.png" alt="Final Leaderboard">
 </p>
 
 <p align="center">
 At the end of the three rounds, the <strong>total score</strong> of the match will be shown on the screen <br>
-and the user also has the option to return to the Homepage.
+and the user also has the option to return to the Homepage or take a look at the <strong>Leaderboard</strong> <br>
+to see if the score was enough to compete with the best players.
 </p>
