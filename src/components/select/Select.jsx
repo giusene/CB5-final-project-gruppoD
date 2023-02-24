@@ -43,7 +43,6 @@ export const options = [
 
 export default function Select({ setAvatar }) {
   const { dispatch } = useContext(ApplicationCtx);
-  /*const [avatarId, setAvatar] = useState("");*/
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -55,7 +54,6 @@ export default function Select({ setAvatar }) {
     setSelectedOption(option);
     setIsOpen(false);
     setAvatar(option.image);
-    /*await dispatch({ type: "SET_AVATAR", payload: option.id });*/
   };
 
   useEffect(() => {
@@ -84,7 +82,6 @@ export default function Select({ setAvatar }) {
           {options.map((option) => (
             <div
               value={option.id}
-              // onChange={(option) => setAvatar(option.target.value)}
               key={option.id}
               onClick={() => handleSelectOption(option)}
               className={styles.Option}

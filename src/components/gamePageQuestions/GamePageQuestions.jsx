@@ -1,13 +1,7 @@
 import styles from "./styles.module.scss";
 import { textReplacer } from "../../utils/textReplacer";
-import { useEffect } from "react";
 
 export default function GamePageQuestions({ username, question }) {
-  //   useEffect(() => {
-  //     if (window) {
-  //       console.log(localStorage.getItem("username"));
-  //     }
-  //   }, []);
   return (
     <div className={styles.Question}>
       <div className={styles.userInfo}>
